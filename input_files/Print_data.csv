@@ -1,0 +1,657 @@
+﻿date,product,WIP_URN,region,publication,edition,size,position,Dimension (sq.cm.),insertions,spend_in_inr
+10-Jan-25,Jupiter,WIP_TVS_0001,Orissa,THE SAMAJA - DAILY,All editions,quarter_page,Front Page,16x25,3,1936229.01
+10-Jan-25,Jupiter,WIP_TVS_0002,Orissa,SAMBAD,All Editions,strip,Front Page,33x5,2,473367.54
+10-Jan-25,Jupiter,WIP_TVS_0003,Andhra Pradesh,SAKSHI,All Editions,strip,Front Page,33x5,9,2841104.67
+10-Jan-25,Jupiter,WIP_TVS_0004,Andhra Pradesh,SIYASAT,All Editions,quarter_page,Front Page,16x25,10,4336121.02
+10-Jan-25,Jupiter,WIP_TVS_0005,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Jacket Page 1,12x20,2,454951.42
+10-Jan-25,Jupiter,WIP_TVS_0006,Punjab,JAGBANI - PUNJAB,All editions,quarter_page,Inside Page,16x25,10,5496550.13
+10-Jan-25,Jupiter,WIP_TVS_0007,Punjab,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,5,2072848.61
+10-Jan-25,Jupiter,WIP_TVS_0008,Punjab,PUNJAB KESARI,All editions,strip,Inside Page,12x20,4,1188144.63
+10-Jan-25,Jupiter,WIP_TVS_0009,Tamil Nadu,SAKSHI,All Editions,strip,Page 3,33x5,4,1769854.52
+10-Jan-25,Jupiter,WIP_TVS_0010,Tamil Nadu,DINAMALAR - CHENNAI,All Editions,full_page,Front Page,33x45,3,4997686.15
+10-Jan-25,Jupiter,WIP_TVS_0011,West Bengal,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,6,1492617.88
+10-Jan-25,Jupiter,WIP_TVS_0012,Uttaranchal,I NEXT - JAGRAN,All editions,strip,Front Page,33x5,3,951125.19
+10-Jan-25,Jupiter,WIP_TVS_0013,Chhattisgarh,NAI DUNIA (I),All Editions,quarter_page,Front Page,16x25,9,4618620.96
+10-Jan-25,Jupiter,WIP_TVS_0014,Chhattisgarh,DAINIK BHASKAR,All editions,half_page,Front Page,33x25,11,15937691.08
+10-Jan-25,Jupiter,WIP_TVS_0015,Gujarat,TIMES - CITI CENTRIC,All Editions,strip,Front Page,33x5,1,401907.45
+10-Jan-25,Jupiter,WIP_TVS_0016,Gujarat,GUJARAT SAMACHAR,All editions,strip,Front Page,12x20,11,2853700.98
+10-Jan-25,Jupiter,WIP_TVS_0017,Uttar Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,10,4678090.96
+10-Jan-25,Jupiter,WIP_TVS_0018,Uttar Pradesh,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,4,825963.76
+10-Jan-25,Jupiter,WIP_TVS_0019,Rajasthan,PUNJAB KESARI,All editions,strip,Page 3,12x20,3,959267.96
+10-Jan-25,Jupiter,WIP_TVS_0020,Rajasthan,RAJASTHAN PATRIKA (MAIN),All Editions,quarter_page,Front Page,16x25,4,3197554.77
+10-Jan-25,Jupiter,WIP_TVS_0021,Bihar,DAINIK JAGRAN,All Editions,quarter_page,Inside Page,16x25,8,6216648.01
+10-Jan-25,Jupiter,WIP_TVS_0022,Bihar,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,1,437471.79
+10-Jan-25,Jupiter,WIP_TVS_0023,Madhya Pradesh,DAINIK BHASKAR,All editions,strip,Inside Page,33x5,2,495217.93
+10-Jan-25,Jupiter,WIP_TVS_0024,Delhi,SAKSHI,All editions,strip,Inside Page,33x5,9,2640912.33
+10-Jan-25,Jupiter,WIP_TVS_0025,Pondicherry,DINAMALAR - CHENNAI,All editions,strip,Page 3,12x20,2,373127.6
+10-Jan-25,Jupiter,WIP_TVS_0026,Pondicherry,DAILY THANTHI,All editions,quarter_page,Front Page,16x25,11,8437521.82
+10-Jan-25,Jupiter,WIP_TVS_0027,Karnataka,ANDHRA JYOTHI,All editions,quarter_page,Front Page,16x25,4,1403303.64
+10-Jan-25,Jupiter,WIP_TVS_0028,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,33x5,8,3279638.9
+10-Jan-25,Jupiter,WIP_TVS_0029,Haryana,PUNJAB KESARI,All editions,strip,Front Page,12x20,2,865370.74
+10-Jan-25,Jupiter,WIP_TVS_0030,Jharkhand,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,1,367615.1
+10-Jan-25,Apache,WIP_TVS_0031,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Front Page,33x5,1,387939.12
+10-Jan-25,Apache,WIP_TVS_0032,Rajasthan,PUNJAB KESARI,All editions,strip,Inside Page,12x20,7,1494317.89
+10-Jan-25,Apache,WIP_TVS_0033,Jammu & Kashmir,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,5,1086818.75
+10-Jan-25,Apache,WIP_TVS_0034,Jammu & Kashmir,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,11,6460883.16
+10-Jan-25,Apache,WIP_TVS_0035,Gujarat,DAINIK BHASKAR,All editions,quarter_page,Jacket Page 1,16x25,2,1030223.33
+10-Jan-25,Apache,WIP_TVS_0036,Gujarat,TIMES - CITI CENTRIC,All editions,strip,Page 3,33x5,4,1439498.18
+10-Jan-25,Apache,WIP_TVS_0037,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Front Page,12x20,3,556767.29
+10-Jan-25,Apache,WIP_TVS_0038,Madhya Pradesh,DAINIK BHASKAR,All Editions,strip,Front Page,33x5,5,1687256.7
+10-Jan-25,Apache,WIP_TVS_0039,Karnataka,SAKSHI,All editions,quarter_page,Front Page,16x25,2,1226420.47
+10-Jan-25,Apache,WIP_TVS_0040,West Bengal,DAINIK JAGRAN,All Editions,strip,Inside Page,33x5,3,1321716.36
+10-Jan-25,Apache,WIP_TVS_0041,Chandigarh,PUNJAB KESARI,All editions,strip,Page 3,33x5,9,2233662.01
+10-Jan-25,Apache,WIP_TVS_0042,Chandigarh,DAINIK JAGRAN,All editions,strip,Front Page,12x20,1,218312.19
+10-Jan-25,Apache,WIP_TVS_0043,Pondicherry,DINAMALAR - CHENNAI,All editions,strip,Front Page,33x5,6,3416246.02
+10-Jan-25,Apache,WIP_TVS_0044,Orissa,SAMBAD,All editions,half_page,Jacket Page 1,33x25,7,3209701.36
+10-Jan-25,Apache,WIP_TVS_0045,Orissa,THE SAMAJA - DAILY,All Editions,full_page,Inside Page,33x45,11,33841198.42
+10-Jan-25,Apache,WIP_TVS_0046,Andhra Pradesh,SAKSHI,All Editions,strip,Inside Page,33x5,1,397172.91
+10-Jan-25,Apache,WIP_TVS_0047,Maharashtra,MIDDAY,All editions,half_page,Page 3,33x25,1,1045766.74
+10-Jan-25,Apache,WIP_TVS_0048,Maharashtra,LOKMAT TIMES,All Editions,quarter_page,Page 3,16x25,6,3832290.07
+10-Jan-25,Apache,WIP_TVS_0049,Delhi,SAKSHI,All editions,strip,Jacket Page 1,33x5,10,2765344.3
+10-Jan-25,Apache,WIP_TVS_0050,Delhi,NAVODAY TIMES,All Editions,strip,Front Page,12x20,7,2581242.25
+10-Jan-25,Apache,WIP_TVS_0051,Delhi,DAINIK JAGRAN,All editions,strip,Page 3,33x5,5,1209586.4
+10-Jan-25,Apache,WIP_TVS_0052,Uttaranchal,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,10,4949447.52
+10-Jan-25,TVS Brand,WIP_TVS_0053,Uttaranchal,I NEXT - JAGRAN,All editions,strip,Front Page,12x20,10,2753657.16
+10-Jan-25,TVS Brand,WIP_TVS_0054,Jammu & Kashmir,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,8,3373095.48
+10-Jan-25,TVS Brand,WIP_TVS_0055,Jammu & Kashmir,PUNJAB KESARI,All editions,strip,Front Page,33x5,11,2456465.32
+10-Jan-25,TVS Brand,WIP_TVS_0056,Kerala,MATHRUBHUMI,All Editions,half_page,Inside Page,33x25,4,4735138.42
+10-Jan-25,TVS Brand,WIP_TVS_0057,Kerala,VANITHA - MALAYALAM,All Editions,strip,Front Page,33x5,10,2339343.74
+10-Jan-25,TVS Brand,WIP_TVS_0058,Kerala,MALAYALA MANORAMA,All Editions,half_page,Front Page,33x25,8,6599583.37
+10-Jan-25,TVS Brand,WIP_TVS_0059,Uttar Pradesh,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,1,266413.04
+10-Jan-25,TVS Brand,WIP_TVS_0060,Uttar Pradesh,I NEXT - JAGRAN,All Editions,half_page,Front Page,33x25,11,13895196.24
+10-Jan-25,TVS Brand,WIP_TVS_0061,Gujarat,GUJARAT SAMACHAR,All editions,half_page,Front Page,33x25,12,16669509.95
+10-Jan-25,TVS Brand,WIP_TVS_0062,Gujarat,SANDESH,All Editions,strip,Front Page,33x5,9,4293800.67
+10-Jan-25,TVS Brand,WIP_TVS_0063,Gujarat,THE ECONOMIC TIMES,All Editions,strip,Front Page,33x5,4,1279880.01
+10-Jan-25,TVS Brand,WIP_TVS_0064,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,33x5,12,3093093.35
+10-Jan-25,TVS Brand,WIP_TVS_0065,Haryana,PUNJAB KESARI,All Editions,quarter_page,Front Page,16x25,1,462826.43
+10-Jan-25,TVS Brand,WIP_TVS_0066,Goa,LOKMAT,All Editions,half_page,Inside Page,33x25,8,4766601.14
+10-Jan-25,TVS Brand,WIP_TVS_0067,Goa,GOMANTAK,All Editions,strip,Front Page,33x5,9,4901975.6
+10-Jan-25,TVS Brand,WIP_TVS_0068,Tamil Nadu,SAKSHI,All editions,strip,Front Page,33x5,7,2811493.96
+10-Jan-25,TVS Brand,WIP_TVS_0069,West Bengal,DAINIK JAGRAN,All editions,half_page,Page 3,33x25,7,8046557.37
+14-Feb-25,iQube,WIP_TVS_0070,Chhattisgarh,HARI BHOOMI,All Editions,quarter_page,Front Page,16x25,5,4097859.07
+14-Feb-25,iQube,WIP_TVS_0071,Chhattisgarh,DAINIK BHASKAR,All Editions,quarter_page,Page 3,16x25,1,703626.29
+14-Feb-25,iQube,WIP_TVS_0072,Tamil Nadu,DINAMALAR - CHENNAI,All editions,strip,Jacket Page 1,33x5,1,290005.06
+14-Feb-25,iQube,WIP_TVS_0073,Tamil Nadu,DINAMALAR - T,All editions,strip,Front Page,33x5,8,2133001.17
+14-Feb-25,iQube,WIP_TVS_0074,Gujarat,SANDESH,All editions,strip,Inside Page,12x20,10,3665381.16
+14-Feb-25,iQube,WIP_TVS_0075,West Bengal,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,2,488914.5
+14-Feb-25,iQube,WIP_TVS_0076,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,full_page,Front Page,33x45,2,5460942.29
+14-Feb-25,iQube,WIP_TVS_0077,Rajasthan,PUNJAB KESARI,All editions,half_page,Inside Page,33x25,10,10782168.12
+14-Feb-25,iQube,WIP_TVS_0078,Jharkhand,I NEXT - JAGRAN,All editions,strip,Inside Page,33x5,7,2694282.91
+14-Feb-25,iQube,WIP_TVS_0079,Jharkhand,DAINIK JAGRAN,All Editions,full_page,Inside Page,33x45,12,15441124.89
+14-Feb-25,iQube,WIP_TVS_0080,Bihar,I NEXT - JAGRAN,All Editions,quarter_page,Page 3,16x25,6,4023255.49
+14-Feb-25,iQube,WIP_TVS_0081,Bihar,DAINIK JAGRAN,All Editions,full_page,Front Page,33x45,4,10150111.14
+14-Feb-25,iQube,WIP_TVS_0082,Himachal Pradesh,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,3,1474907.02
+14-Feb-25,Jupiter,WIP_TVS_0083,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,12x20,2,403676.51
+14-Feb-25,Jupiter,WIP_TVS_0084,Haryana,PUNJAB KESARI,All Editions,strip,Front Page,12x20,8,2389911.11
+14-Feb-25,Jupiter,WIP_TVS_0085,Himachal Pradesh,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,5,1785032.4
+14-Feb-25,Jupiter,WIP_TVS_0086,National,TOI.COM (PAN INDIA),All editions,strip,Front Page,33x5,4,1373451.86
+14-Feb-25,Jupiter,WIP_TVS_0087,Uttar Pradesh,I NEXT - JAGRAN,All Editions,half_page,Front Page,33x25,3,1974550.21
+14-Feb-25,Jupiter,WIP_TVS_0088,Uttar Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,9,4400531.13
+14-Feb-25,Jupiter,WIP_TVS_0089,Madhya Pradesh,NAI DUNIA (I),All Editions,strip,Front Page,33x5,8,3521959.62
+14-Feb-25,Jupiter,WIP_TVS_0090,Andhra Pradesh,ANDHRA JYOTHI,All editions,strip,Page 3,33x5,2,817464.3
+14-Feb-25,Jupiter,WIP_TVS_0091,Kerala,MATHRUBHUMI,All Editions,strip,Front Page,33x5,2,559479.67
+14-Feb-25,Jupiter,WIP_TVS_0092,Kerala,MALAYALA MANORAMA,All editions,strip,Inside Page,12x20,9,2202931.15
+14-Feb-25,Jupiter,WIP_TVS_0093,Kerala,VANITHA - MALAYALAM,All Editions,quarter_page,Page 3,16x25,5,3135403.93
+14-Feb-25,Jupiter,WIP_TVS_0094,Chandigarh,PUNJAB KESARI,All editions,strip,Front Page,12x20,3,555311.11
+14-Feb-25,Jupiter,WIP_TVS_0095,Chandigarh,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,12,4909186.16
+14-Feb-25,Jupiter,WIP_TVS_0096,Chandigarh,JAGBANI - PUNJAB,All Editions,strip,Inside Page,33x5,2,754090.69
+14-Feb-25,Jupiter,WIP_TVS_0097,Chhattisgarh,NAI DUNIA (I),All editions,strip,Front Page,33x5,5,1137502.28
+14-Feb-25,Jupiter,WIP_TVS_0098,Chhattisgarh,DAINIK BHASKAR,All Editions,strip,Front Page,33x5,8,2095012.15
+14-Feb-25,Jupiter,WIP_TVS_0099,Chhattisgarh,HARI BHOOMI,All Editions,quarter_page,Front Page,16x25,9,5234920.06
+14-Feb-25,Jupiter,WIP_TVS_0100,Orissa,SAMBAD,All Editions,half_page,Inside Page,33x25,1,531164.28
+14-Feb-25,Jupiter,WIP_TVS_0101,Delhi,SAKSHI,All editions,strip,Inside Page,12x20,8,2427026.33
+14-Feb-25,Jupiter,WIP_TVS_0102,Delhi,DAINIK JAGRAN,All Editions,full_page,Front Page,33x45,11,29684971.02
+14-Feb-25,Jupiter,WIP_TVS_0103,Delhi,NAVODAY TIMES,All Editions,strip,Front Page,33x5,6,1747835.28
+14-Feb-25,Jupiter,WIP_TVS_0104,Pondicherry,DINAMALAR - CHENNAI,All editions,strip,Page 3,33x5,8,1823232.19
+14-Feb-25,Jupiter,WIP_TVS_0105,Pondicherry,DAILY THANTHI,All Editions,quarter_page,Jacket Page 1,16x25,9,7879659.61
+08-Mar-25,Raider,WIP_TVS_0106,Madhya Pradesh,DAINIK BHASKAR,All editions,full_page,Inside Page,33x45,12,14775598.18
+08-Mar-25,Raider,WIP_TVS_0107,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Front Page,33x5,2,1041918
+08-Mar-25,Raider,WIP_TVS_0108,Rajasthan,PUNJAB KESARI,All Editions,full_page,Front Page,33x45,7,19119014.18
+08-Mar-25,Raider,WIP_TVS_0109,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,quarter_page,Front Page,16x25,7,3271952.37
+08-Mar-25,Raider,WIP_TVS_0110,Gujarat,TIMES - CITI CENTRIC,All Editions,strip,Inside Page,33x5,6,2536694.15
+08-Mar-25,Raider,WIP_TVS_0111,Gujarat,DIVYA BHASKAR,All Editions,strip,Inside Page,33x5,3,1322455.27
+08-Mar-25,Raider,WIP_TVS_0112,Gujarat,DAINIK BHASKAR,All Editions,quarter_page,Front Page,16x25,8,5862640.12
+08-Mar-25,Raider,WIP_TVS_0113,Bihar,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,1,256254.46
+08-Mar-25,Raider,WIP_TVS_0114,Chandigarh,JAGBANI - PUNJAB,All Editions,quarter_page,Front Page,16x25,2,1725976.17
+08-Mar-25,Raider,WIP_TVS_0115,Chandigarh,PUNJAB KESARI,All editions,strip,Page 3,33x5,12,3187858.02
+08-Mar-25,Raider,WIP_TVS_0116,Chandigarh,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,5,1252611.61
+08-Mar-25,Raider,WIP_TVS_0117,Kerala,MATHRUBHUMI,All Editions,half_page,Page 3,33x25,6,7550939.68
+08-Mar-25,Raider,WIP_TVS_0118,Kerala,MALAYALA MANORAMA,All editions,strip,Page 3,12x20,10,1501193.5
+08-Mar-25,Raider,WIP_TVS_0119,Delhi,NAVODAY TIMES,All editions,quarter_page,Front Page,16x25,8,3338173.48
+08-Mar-25,Raider,WIP_TVS_0120,Delhi,DAINIK JAGRAN,All editions,full_page,Front Page,33x45,5,8320265.26
+08-Mar-25,Raider,WIP_TVS_0121,Delhi,SAKSHI,All editions,strip,Front Page,33x5,3,727936.63
+08-Mar-25,Raider,WIP_TVS_0122,Karnataka,THE ECONOMIC TIMES,All editions,quarter_page,Front Page,16x25,8,4576078.89
+08-Mar-25,Raider,WIP_TVS_0123,Karnataka,SAKAL,All Editions,strip,Front Page,33x5,5,2100029.66
+08-Mar-25,Raider,WIP_TVS_0124,Uttar Pradesh,I NEXT - JAGRAN,All Editions,strip,Front Page,12x20,8,2737432.62
+08-Mar-25,Raider,WIP_TVS_0125,Uttar Pradesh,DAINIK JAGRAN,All editions,full_page,Page 3,33x45,4,7406223.81
+08-Mar-25,Raider,WIP_TVS_0126,Goa,GOMANTAK TIMES,All Editions,full_page,Inside Page,33x45,1,2506176.45
+08-Mar-25,Raider,WIP_TVS_0127,Goa,LOKMAT,All Editions,strip,Jacket Page 1,12x20,5,1977982.44
+08-Mar-25,Raider,WIP_TVS_0128,Goa,GOMANTAK,All editions,strip,Front Page,12x20,10,2310375.17
+08-Mar-25,Raider,WIP_TVS_0129,Andhra Pradesh,EENADU,All Editions,full_page,Inside Page,33x45,8,8832213.07
+08-Mar-25,Raider,WIP_TVS_0130,Andhra Pradesh,SAKSHI,All Editions,strip,Front Page,12x20,6,2005526.52
+08-Mar-25,Raider,WIP_TVS_0131,Andhra Pradesh,ANDHRA JYOTHI,All Editions,strip,Inside Page,33x5,9,4857081.13
+08-Mar-25,Raider,WIP_TVS_0132,Orissa,THE SAMAJA - DAILY,All Editions,full_page,Page 3,33x45,12,31716952.79
+08-Mar-25,Raider,WIP_TVS_0133,West Bengal,DAINIK JAGRAN,All editions,full_page,Front Page,33x45,11,29639601.28
+08-Mar-25,Raider,WIP_TVS_0134,Himachal Pradesh,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,9,2340063.08
+08-Mar-25,Raider,WIP_TVS_0135,Chhattisgarh,NAI DUNIA (I),All editions,half_page,Page 3,33x25,11,8103458.58
+08-Mar-25,Raider,WIP_TVS_0136,Chhattisgarh,HARI BHOOMI,All Editions,strip,Page 3,12x20,10,2203164.5
+08-Mar-25,Raider,WIP_TVS_0137,Chhattisgarh,DAINIK BHASKAR,All Editions,strip,Front Page,12x20,11,2393835.18
+08-Mar-25,Raider,WIP_TVS_0138,Uttaranchal,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,4,3106683.8
+08-Mar-25,Raider,WIP_TVS_0139,Punjab,JAGBANI - PUNJAB,All Editions,strip,Inside Page,12x20,10,3758137.05
+08-Mar-25,Raider,WIP_TVS_0140,Punjab,PUNJAB KESARI,All Editions,half_page,Inside Page,33x25,10,10909059.61
+08-Mar-25,Raider,WIP_TVS_0141,Jharkhand,DAINIK JAGRAN,All editions,strip,Front Page,33x5,6,1803508.96
+08-Mar-25,Raider,WIP_TVS_0142,Jharkhand,I NEXT - JAGRAN,All Editions,quarter_page,Page 3,16x25,1,463131.86
+08-Mar-25,iQube,WIP_TVS_0143,Rajasthan,PUNJAB KESARI,All editions,strip,Inside Page,33x5,10,3524417.82
+08-Mar-25,iQube,WIP_TVS_0144,Chhattisgarh,HARI BHOOMI,All editions,strip,Inside Page,12x20,5,2238176.27
+08-Mar-25,iQube,WIP_TVS_0145,Pondicherry,DINAMALAR - CHENNAI,All editions,strip,Front Page,12x20,3,435506.03
+08-Mar-25,iQube,WIP_TVS_0146,Chandigarh,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,3,2001281.23
+08-Mar-25,iQube,WIP_TVS_0147,National,TOI.COM (PAN INDIA),All editions,quarter_page,Inside Page,16x25,8,4010562
+08-Mar-25,iQube,WIP_TVS_0148,Andhra Pradesh,ANDHRA JYOTHI,All editions,quarter_page,Jacket Page 1,16x25,8,5719522.58
+08-Mar-25,iQube,WIP_TVS_0149,Andhra Pradesh,SAKSHI,All Editions,strip,Front Page,12x20,2,642110.3
+08-Mar-25,iQube,WIP_TVS_0150,Andhra Pradesh,EENADU,All Editions,strip,Front Page,12x20,10,3267456.28
+08-Mar-25,iQube,WIP_TVS_0151,Bihar,I NEXT - JAGRAN,All Editions,full_page,Front Page,33x45,9,19856719.31
+08-Mar-25,iQube,WIP_TVS_0152,Bihar,DAINIK JAGRAN,All editions,strip,Front Page,12x20,7,2170231.74
+08-Mar-25,iQube,WIP_TVS_0153,Haryana,PUNJAB KESARI,All Editions,quarter_page,Inside Page,16x25,7,3461403.71
+08-Mar-25,iQube,WIP_TVS_0154,Haryana,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,2,787975.64
+08-Mar-25,iQube,WIP_TVS_0155,Punjab,JAGBANI - PUNJAB,All editions,strip,Inside Page,33x5,9,2155066.5
+01-Apr-25,Raider,WIP_TVS_0156,Madhya Pradesh,NAI DUNIA (I),All Editions,strip,Front Page,33x5,2,712611.79
+01-Apr-25,Raider,WIP_TVS_0157,Haryana,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,6,1849005.24
+01-Apr-25,Raider,WIP_TVS_0158,Haryana,PUNJAB KESARI,All Editions,half_page,Front Page,33x25,2,1422598.03
+01-Apr-25,Raider,WIP_TVS_0159,Pondicherry,DAILY THANTHI,All Editions,strip,Front Page,12x20,8,1652492.66
+01-Apr-25,Raider,WIP_TVS_0160,Orissa,THE SAMAJA - DAILY,All editions,half_page,Front Page,33x25,11,5853831.22
+01-Apr-25,Raider,WIP_TVS_0161,Orissa,SAMBAD,All Editions,strip,Front Page,12x20,7,1374772.06
+01-Apr-25,Raider,WIP_TVS_0162,Gujarat,DAINIK BHASKAR,All Editions,strip,Inside Page,33x5,9,2663378.86
+01-Apr-25,Raider,WIP_TVS_0163,Gujarat,GUJARAT SAMACHAR,All editions,quarter_page,Front Page,16x25,4,2158474.87
+01-Apr-25,Raider,WIP_TVS_0164,Gujarat,SANDESH,All Editions,strip,Inside Page,12x20,6,874340.68
+01-Apr-25,Raider,WIP_TVS_0165,Delhi,NAVODAY TIMES,All Editions,quarter_page,Inside Page,16x25,2,1163430.84
+01-Apr-25,Raider,WIP_TVS_0166,Delhi,DAINIK JAGRAN,All editions,strip,Front Page,33x5,6,2625287.65
+01-Apr-25,Raider,WIP_TVS_0167,Delhi,SAKSHI,All editions,strip,Front Page,12x20,7,1291209.27
+01-Apr-25,Raider,WIP_TVS_0168,National,TOI.COM (PAN INDIA),All editions,half_page,Page 3,33x25,7,8169520.82
+01-Apr-25,Raider,WIP_TVS_0169,Bihar,I NEXT - JAGRAN,All Editions,quarter_page,Front Page,16x25,4,2110453.22
+01-Apr-25,Raider,WIP_TVS_0170,Bihar,DAINIK JAGRAN,All editions,strip,Inside Page,33x5,6,2514056.6
+01-Apr-25,Raider,WIP_TVS_0171,Jammu & Kashmir,DAINIK JAGRAN,All editions,strip,Front Page,33x5,10,3093064.14
+01-Apr-25,Raider,WIP_TVS_0172,Jammu & Kashmir,PUNJAB KESARI,All Editions,strip,Front Page,12x20,8,2853113.54
+01-Apr-25,Raider,WIP_TVS_0173,Karnataka,VIJAYAVANI,All Editions,strip,Front Page,33x5,11,4414190.96
+01-Apr-25,Raider,WIP_TVS_0174,Karnataka,UDAYAVANI,All editions,strip,Front Page,12x20,5,1329148.18
+01-Apr-25,Raider,WIP_TVS_0175,Karnataka,BANGALORE TIMES - TOI,All editions,strip,Page 3,33x5,11,2845914.68
+01-Apr-25,Raider,WIP_TVS_0176,West Bengal,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,8,6982756.71
+01-Apr-25,Raider,WIP_TVS_0177,Jharkhand,DAINIK JAGRAN,All editions,strip,Front Page,12x20,8,1593318.95
+01-Apr-25,Raider,WIP_TVS_0178,Jharkhand,I NEXT - JAGRAN,All editions,half_page,Jacket Page 1,33x25,9,9209578.9
+01-Apr-25,Raider,WIP_TVS_0179,Kerala,MATHRUBHUMI,All editions,quarter_page,Front Page,16x25,6,3469877.37
+01-Apr-25,Raider,WIP_TVS_0180,Rajasthan,RAJASTHAN PATRIKA (MAIN),All Editions,strip,Front Page,12x20,2,396156.53
+01-Apr-25,Raider,WIP_TVS_0181,Rajasthan,PUNJAB KESARI,All editions,strip,Front Page,12x20,6,1062218.78
+01-Apr-25,Raider,WIP_TVS_0182,Himachal Pradesh,DAINIK JAGRAN,All Editions,quarter_page,Inside Page,16x25,3,1989276.68
+01-Apr-25,Raider,WIP_TVS_0183,Tamil Nadu,DINAMALAR - T,All Editions,strip,Inside Page,12x20,3,1056264.14
+14-Apr-25,Apache,WIP_TVS_0184,Kerala,MALAYALA MANORAMA,All editions,strip,Page 3,12x20,10,2143515.97
+14-Apr-25,Apache,WIP_TVS_0185,Kerala,MATHRUBHUMI,All editions,strip,Inside Page,33x5,12,4212942.78
+14-Apr-25,Apache,WIP_TVS_0186,Chhattisgarh,NAI DUNIA (I),All Editions,full_page,Inside Page,33x45,4,7594908.44
+14-Apr-25,Apache,WIP_TVS_0187,Chhattisgarh,DAINIK BHASKAR,All editions,full_page,Inside Page,33x45,6,17134699.69
+14-Apr-25,Apache,WIP_TVS_0188,Tamil Nadu,SAKSHI,All Editions,strip,Front Page,12x20,3,961205.44
+14-Apr-25,Apache,WIP_TVS_0189,Tamil Nadu,DINAMALAR - CHENNAI,All editions,strip,Page 3,12x20,11,3490112.63
+14-Apr-25,Apache,WIP_TVS_0190,Gujarat,DAINIK BHASKAR,All Editions,strip,Inside Page,33x5,8,3223730.36
+14-Apr-25,Apache,WIP_TVS_0191,Gujarat,THE ECONOMIC TIMES,All editions,quarter_page,Page 3,16x25,8,5742761.86
+14-Apr-25,Apache,WIP_TVS_0192,Gujarat,TIMES - CITI CENTRIC,All Editions,strip,Front Page,33x5,4,1928292.26
+14-Apr-25,Apache,WIP_TVS_0193,Uttaranchal,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,3,910243.43
+14-Apr-25,Apache,WIP_TVS_0194,Uttaranchal,I NEXT - JAGRAN,All editions,full_page,Front Page,33x45,12,23316112.13
+14-Apr-25,Apache,WIP_TVS_0195,Delhi,DAINIK JAGRAN,All editions,strip,Front Page,33x5,9,4158630.85
+14-Apr-25,Apache,WIP_TVS_0196,Andhra Pradesh,EENADU,All Editions,strip,Front Page,33x5,2,585766.94
+14-Apr-25,Apache,WIP_TVS_0197,Andhra Pradesh,SIYASAT,All editions,quarter_page,Front Page,16x25,12,4127314.06
+14-Apr-25,Apache,WIP_TVS_0198,Maharashtra,SAKSHI,All editions,quarter_page,Front Page,16x25,11,5967948.46
+14-Apr-25,Apache,WIP_TVS_0199,Jammu & Kashmir,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,6,2854912.5
+14-Apr-25,Apache,WIP_TVS_0200,Jammu & Kashmir,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,12,8130914.51
+14-Apr-25,Apache,WIP_TVS_0201,Uttar Pradesh,I NEXT - JAGRAN,All editions,strip,Front Page,33x5,11,5818029.66
+14-Apr-25,Apache,WIP_TVS_0202,Uttar Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,2,1500060.07
+14-Apr-25,Apache,WIP_TVS_0203,Orissa,SAMBAD,All editions,strip,Inside Page,33x5,6,2188800.27
+14-Apr-25,Apache,WIP_TVS_0204,Orissa,THE SAMAJA - DAILY,All Editions,full_page,Front Page,33x45,1,2731352.51
+14-Apr-25,Apache,WIP_TVS_0205,Jharkhand,I NEXT - JAGRAN,All editions,half_page,Front Page,33x25,6,6644727.92
+14-Apr-25,Apache,WIP_TVS_0206,Jharkhand,DAINIK JAGRAN,All Editions,strip,Page 3,12x20,6,1192024.91
+14-Apr-25,Apache,WIP_TVS_0207,Punjab,JAGBANI - PUNJAB,All editions,half_page,Inside Page,33x25,7,9490898.21
+14-Apr-25,Apache,WIP_TVS_0208,Punjab,PUNJAB KESARI,All editions,strip,Front Page,33x5,2,791727.78
+14-Apr-25,Apache,WIP_TVS_0209,Pondicherry,DINAMALAR - CHENNAI,All Editions,strip,Front Page,33x5,1,402521.87
+14-Apr-25,Apache,WIP_TVS_0210,Pondicherry,DAILY THANTHI,All editions,quarter_page,Inside Page,16x25,2,1375500.77
+14-Apr-25,Apache,WIP_TVS_0211,Haryana,DAINIK JAGRAN,All Editions,strip,Inside Page,33x5,1,220102.47
+14-Apr-25,Apache,WIP_TVS_0212,Haryana,PUNJAB KESARI,All Editions,strip,Front Page,12x20,10,1651515.5
+14-Apr-25,Apache,WIP_TVS_0213,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,quarter_page,Inside Page,16x25,9,4250738.84
+14-Apr-25,Apache,WIP_TVS_0214,Rajasthan,PUNJAB KESARI,All editions,strip,Front Page,12x20,1,299796.38
+14-Apr-25,Apache,WIP_TVS_0215,Himachal Pradesh,DAINIK JAGRAN,All Editions,full_page,Front Page,33x45,12,20578518.32
+14-Apr-25,Apache,WIP_TVS_0216,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Front Page,33x5,8,2694806.82
+14-Apr-25,Apache,WIP_TVS_0217,Madhya Pradesh,DAINIK BHASKAR,All Editions,quarter_page,Front Page,16x25,11,5748181.76
+01-May-25,Raider,WIP_TVS_0218,Madhya Pradesh,NAI DUNIA (I),All editions,half_page,Front Page,33x25,2,1581469.48
+01-May-25,Raider,WIP_TVS_0219,Madhya Pradesh,DAINIK BHASKAR,All Editions,strip,Front Page,12x20,7,2637554.02
+01-May-25,Raider,WIP_TVS_0220,Jammu & Kashmir,PUNJAB KESARI,All Editions,strip,Front Page,12x20,3,1290561.12
+01-May-25,Raider,WIP_TVS_0221,Uttar Pradesh,DAINIK JAGRAN,All editions,quarter_page,Page 3,16x25,2,984589.47
+01-May-25,Raider,WIP_TVS_0222,Uttar Pradesh,I NEXT - JAGRAN,All editions,strip,Front Page,33x5,6,3279726.42
+01-May-25,Raider,WIP_TVS_0223,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Jacket Page 1,33x5,3,1125564.71
+01-May-25,Raider,WIP_TVS_0224,Tamil Nadu,DINAMALAR - CHENNAI,All editions,strip,Front Page,12x20,11,3755270.91
+01-May-25,Raider,WIP_TVS_0225,Delhi,NAVODAY TIMES,All Editions,strip,Page 3,33x5,11,3780511.58
+01-May-25,Raider,WIP_TVS_0226,Delhi,DAINIK JAGRAN,All Editions,quarter_page,Inside Page,16x25,11,5904082.31
+01-May-25,Raider,WIP_TVS_0227,Delhi,SAKSHI,All Editions,full_page,Front Page,33x45,5,8089362.64
+01-May-25,Raider,WIP_TVS_0228,Kerala,MALAYALA MANORAMA,All editions,quarter_page,Front Page,16x25,6,3179818.67
+01-May-25,Raider,WIP_TVS_0229,Punjab,JAGBANI - PUNJAB,All editions,strip,Front Page,33x5,6,1934148.59
+01-May-25,Raider,WIP_TVS_0230,Punjab,PUNJAB KESARI,All editions,strip,Front Page,33x5,1,414891.63
+01-May-25,Raider,WIP_TVS_0231,Punjab,DAINIK JAGRAN,All editions,half_page,Front Page,33x25,6,9150432.23
+01-May-25,Raider,WIP_TVS_0232,Orissa,SAMBAD,All Editions,quarter_page,Front Page,16x25,5,2269052.91
+01-May-25,Raider,WIP_TVS_0233,Orissa,THE SAMAJA - DAILY,All editions,full_page,Front Page,33x45,4,8370136.28
+01-May-25,Raider,WIP_TVS_0234,Karnataka,SAKSHI,All Editions,quarter_page,Page 3,16x25,5,2335028.36
+01-May-25,Raider,WIP_TVS_0235,Goa,GOMANTAK TIMES,All Editions,strip,Front Page,33x5,7,2244033.41
+01-May-25,Raider,WIP_TVS_0236,Chhattisgarh,NAI DUNIA (I),All Editions,strip,Front Page,12x20,2,503413.46
+01-May-25,Raider,WIP_TVS_0237,Rajasthan,RAJASTHAN PATRIKA (MAIN),All Editions,strip,Front Page,33x5,6,3473583.28
+01-May-25,Raider,WIP_TVS_0238,Rajasthan,PUNJAB KESARI,All Editions,strip,Front Page,12x20,9,1182159.16
+01-May-25,Raider,WIP_TVS_0239,Uttaranchal,I NEXT - JAGRAN,All editions,half_page,Front Page,33x25,10,14454256.93
+01-May-25,Raider,WIP_TVS_0240,Andhra Pradesh,SAKSHI,All Editions,quarter_page,Inside Page,16x25,10,4777498.15
+01-May-25,Raider,WIP_TVS_0241,Andhra Pradesh,ANDHRA JYOTHI,All Editions,quarter_page,Front Page,16x25,8,4695937.59
+01-May-25,Raider,WIP_TVS_0242,National,TOI.COM (PAN INDIA),All editions,full_page,Front Page,33x45,10,18081533.72
+20-May-25,Apache,WIP_TVS_0243,Maharashtra,MIDDAY,All Editions,strip,Inside Page,33x5,9,4625596.19
+20-May-25,Apache,WIP_TVS_0244,Maharashtra,BOMBAY TIMES,All editions,strip,Front Page,12x20,9,1883969.62
+20-May-25,Apache,WIP_TVS_0245,Uttaranchal,I NEXT - JAGRAN,All Editions,quarter_page,Front Page,16x25,9,4679272.11
+20-May-25,Apache,WIP_TVS_0246,Uttaranchal,DAINIK JAGRAN,All Editions,half_page,Inside Page,33x25,10,8836569.64
+20-May-25,Apache,WIP_TVS_0247,Punjab,JAGBANI - PUNJAB,All Editions,strip,Front Page,12x20,5,1477926.99
+20-May-25,Apache,WIP_TVS_0248,Bihar,I NEXT - JAGRAN,All Editions,quarter_page,Front Page,16x25,5,1872960.98
+20-May-25,Apache,WIP_TVS_0249,Bihar,DAINIK JAGRAN,All Editions,quarter_page,Page 3,16x25,6,4747483.16
+20-May-25,Apache,WIP_TVS_0250,Uttar Pradesh,DAINIK JAGRAN,All Editions,full_page,Front Page,33x45,11,18589383.53
+20-May-25,Apache,WIP_TVS_0251,Uttar Pradesh,I NEXT - JAGRAN,All Editions,strip,Page 3,33x5,9,2634541.99
+20-May-25,Apache,WIP_TVS_0252,Karnataka,THE ECONOMIC TIMES,All editions,strip,Page 3,33x5,11,2908628.66
+20-May-25,Apache,WIP_TVS_0253,Karnataka,SAKAL,All editions,quarter_page,Inside Page,16x25,11,6621986.59
+20-May-25,Apache,WIP_TVS_0254,Karnataka,BANGALORE TIMES - TOI,All editions,full_page,Jacket Page 1,33x45,7,19470421.81
+20-May-25,Apache,WIP_TVS_0255,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Front Page,12x20,11,2117674.85
+20-May-25,Apache,WIP_TVS_0256,Jharkhand,DAINIK JAGRAN,All editions,strip,Front Page,33x5,3,1449510.97
+20-May-25,Apache,WIP_TVS_0257,Kerala,MALAYALA MANORAMA,All Editions,full_page,Front Page,33x45,3,9778347.34
+20-May-25,Apache,WIP_TVS_0258,Goa,GOMANTAK,All Editions,strip,Inside Page,33x5,5,2619700.58
+20-May-25,Apache,WIP_TVS_0259,Goa,LOKMAT,All editions,quarter_page,Front Page,16x25,9,4462391.05
+20-May-25,Apache,WIP_TVS_0260,Chhattisgarh,HARI BHOOMI,All Editions,strip,Front Page,33x5,12,2877282.01
+20-May-25,Apache,WIP_TVS_0261,Gujarat,GUJARAT SAMACHAR,All Editions,strip,Front Page,12x20,7,1858187.37
+20-May-25,Apache,WIP_TVS_0262,Gujarat,THE ECONOMIC TIMES,All editions,quarter_page,Front Page,16x25,8,4412287.2
+20-May-25,Apache,WIP_TVS_0263,Haryana,PUNJAB KESARI,All Editions,quarter_page,Front Page,16x25,6,2840537.42
+20-May-25,Apache,WIP_TVS_0264,Orissa,SAMBAD,All editions,strip,Inside Page,12x20,11,1963342.94
+20-May-25,Apache,WIP_TVS_0265,Orissa,THE SAMAJA - DAILY,All Editions,strip,Inside Page,33x5,12,3312857.74
+20-May-25,Apache,WIP_TVS_0266,Andhra Pradesh,SAKSHI,All Editions,strip,Jacket Page 1,33x5,3,1445986.67
+20-May-25,Apache,WIP_TVS_0267,Andhra Pradesh,SIYASAT,All Editions,strip,Front Page,12x20,9,3454948.99
+20-May-25,Apache,WIP_TVS_0268,Jammu & Kashmir,DAINIK JAGRAN,All editions,strip,Front Page,12x20,9,2431099.37
+20-May-25,Apache,WIP_TVS_0269,Tamil Nadu,DAILY THANTHI,All editions,strip,Page 3,33x5,10,4139446.17
+20-May-25,Apache,WIP_TVS_0270,Tamil Nadu,DINAMALAR - T,All editions,quarter_page,Front Page,16x25,11,4873693.3
+20-May-25,Apache,WIP_TVS_0271,Delhi,DAINIK JAGRAN,All Editions,half_page,Front Page,33x25,8,7185965.83
+20-May-25,Apache,WIP_TVS_0272,Delhi,NAVODAY TIMES,All editions,quarter_page,Page 3,16x25,7,3417885.41
+20-May-25,Apache,WIP_TVS_0273,National,TOI.COM (PAN INDIA),All Editions,strip,Front Page,12x20,12,2033508.16
+15-Jun-25,Raider,WIP_TVS_0274,Chhattisgarh,HARI BHOOMI,All Editions,half_page,Page 3,33x25,2,2883268.29
+15-Jun-25,Raider,WIP_TVS_0275,Chhattisgarh,NAI DUNIA (I),All Editions,half_page,Front Page,33x25,2,1645210.97
+15-Jun-25,Raider,WIP_TVS_0276,Karnataka,BANGALORE TIMES - TOI,All editions,strip,Front Page,12x20,1,224836.79
+15-Jun-25,Raider,WIP_TVS_0277,Karnataka,PRAJAVANI,All Editions,strip,Front Page,12x20,4,845994.47
+15-Jun-25,Raider,WIP_TVS_0278,Bihar,I NEXT - JAGRAN,All editions,strip,Page 3,33x5,1,439100
+15-Jun-25,Raider,WIP_TVS_0279,Jammu & Kashmir,DAINIK JAGRAN,All editions,strip,Front Page,33x5,8,1619943.83
+15-Jun-25,Raider,WIP_TVS_0280,Gujarat,SANDESH,All editions,quarter_page,Front Page,16x25,3,2026657.74
+15-Jun-25,Raider,WIP_TVS_0281,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Inside Page,12x20,4,1054344.26
+15-Jun-25,Raider,WIP_TVS_0282,West Bengal,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,11,7004376.61
+15-Jun-25,Raider,WIP_TVS_0283,National,TOI.COM (PAN INDIA),All Editions,full_page,Page 3,33x45,9,16195005.44
+04-Jul-25,Apache,WIP_TVS_0284,West Bengal,DAINIK JAGRAN,All editions,full_page,Front Page,33x45,7,9529771.25
+04-Jul-25,Apache,WIP_TVS_0285,Jammu & Kashmir,DAINIK JAGRAN,All editions,half_page,Front Page,33x25,1,743104.61
+04-Jul-25,Apache,WIP_TVS_0286,Jammu & Kashmir,PUNJAB KESARI,All editions,strip,Front Page,12x20,4,1594864.22
+04-Jul-25,Apache,WIP_TVS_0287,Goa,LOKMAT,All Editions,strip,Page 3,33x5,1,365439.07
+04-Jul-25,Apache,WIP_TVS_0288,Goa,GOMANTAK,All Editions,full_page,Front Page,33x45,4,10246065.67
+04-Jul-25,Apache,WIP_TVS_0289,Goa,GOMANTAK TIMES,All Editions,strip,Page 3,33x5,5,1970908.99
+04-Jul-25,Apache,WIP_TVS_0290,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,8,2257491.65
+04-Jul-25,Apache,WIP_TVS_0291,Jharkhand,DAINIK JAGRAN,All Editions,strip,Inside Page,12x20,4,914725.5
+04-Jul-25,Apache,WIP_TVS_0292,Madhya Pradesh,DAINIK BHASKAR,All Editions,strip,Front Page,12x20,5,834346.44
+04-Jul-25,Apache,WIP_TVS_0293,Karnataka,VIJAY KARNATAKA,All Editions,strip,Front Page,12x20,5,1975735.11
+04-Jul-25,Apache,WIP_TVS_0294,Punjab,PUNJAB KESARI,All editions,strip,Inside Page,33x5,3,1452819.41
+04-Jul-25,Apache,WIP_TVS_0295,Punjab,JAGBANI - PUNJAB,All editions,full_page,Front Page,33x45,9,10945627.7
+04-Jul-25,Apache,WIP_TVS_0296,Punjab,DAINIK JAGRAN,All editions,strip,Page 3,33x5,1,355859.85
+04-Jul-25,Apache,WIP_TVS_0297,National,TOI.COM (PAN INDIA),All editions,strip,Front Page,33x5,9,3751289.86
+04-Jul-25,Apache,WIP_TVS_0298,Uttar Pradesh,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,1,211225.6
+04-Jul-25,Apache,WIP_TVS_0299,Uttar Pradesh,DAINIK JAGRAN,All editions,strip,Jacket Page 1,33x5,9,4300952.62
+04-Jul-25,Apache,WIP_TVS_0300,Gujarat,DAINIK BHASKAR,All editions,full_page,Front Page,33x45,4,9296444.46
+04-Jul-25,Apache,WIP_TVS_0301,Delhi,NAVODAY TIMES,All Editions,strip,Jacket Page 1,33x5,10,3917324.88
+04-Jul-25,Apache,WIP_TVS_0302,Delhi,SAKSHI,All editions,strip,Inside Page,33x5,11,1995291.05
+04-Jul-25,Apache,WIP_TVS_0303,Chhattisgarh,HARI BHOOMI,All editions,strip,Front Page,33x5,2,1051790.95
+04-Jul-25,Apache,WIP_TVS_0304,Chhattisgarh,NAI DUNIA (I),All editions,strip,Front Page,12x20,9,2874728.19
+04-Jul-25,Apache,WIP_TVS_0305,Kerala,MATHRUBHUMI,All editions,half_page,Front Page,33x25,2,2849929.19
+04-Jul-25,Apache,WIP_TVS_0306,Andhra Pradesh,ANDHRA JYOTHI,All editions,strip,Front Page,33x5,12,5747450.79
+04-Jul-25,Apache,WIP_TVS_0307,Andhra Pradesh,SIYASAT,All Editions,strip,Front Page,33x5,11,4959598.7
+04-Jul-25,Apache,WIP_TVS_0308,Andhra Pradesh,EENADU,All editions,strip,Front Page,12x20,9,3698563.92
+20-Jul-25,Jupiter,WIP_TVS_0309,Orissa,THE SAMAJA - DAILY,All Editions,quarter_page,Front Page,16x25,7,2981600
+20-Jul-25,Jupiter,WIP_TVS_0310,Orissa,SAMBAD,All Editions,strip,Front Page,12x20,4,1117825.79
+20-Jul-25,Jupiter,WIP_TVS_0311,Gujarat,DIVYA BHASKAR,All Editions,strip,Inside Page,12x20,6,1236402.14
+20-Jul-25,Jupiter,WIP_TVS_0312,Gujarat,SANDESH,All Editions,strip,Front Page,33x5,5,1081599.02
+20-Jul-25,Jupiter,WIP_TVS_0313,Punjab,JAGBANI - PUNJAB,All Editions,quarter_page,Front Page,16x25,2,524524.42
+20-Jul-25,Jupiter,WIP_TVS_0314,Chhattisgarh,DAINIK BHASKAR,All editions,strip,Front Page,33x5,12,6879875.51
+20-Jul-25,Jupiter,WIP_TVS_0315,Chhattisgarh,HARI BHOOMI,All editions,full_page,Front Page,33x45,11,17167676.91
+20-Jul-25,Jupiter,WIP_TVS_0316,Chhattisgarh,NAI DUNIA (I),All editions,strip,Front Page,33x5,2,560294.97
+20-Jul-25,Jupiter,WIP_TVS_0317,Haryana,PUNJAB KESARI,All editions,strip,Front Page,12x20,12,3759852.5
+20-Jul-25,Jupiter,WIP_TVS_0318,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,12x20,5,895109.46
+20-Jul-25,Jupiter,WIP_TVS_0319,Goa,LOKMAT,All Editions,half_page,Front Page,33x25,7,10713188.42
+20-Jul-25,Jupiter,WIP_TVS_0320,Goa,GOMANTAK TIMES,All Editions,strip,Front Page,12x20,6,2179533.98
+20-Jul-25,Jupiter,WIP_TVS_0321,National,TOI.COM (PAN INDIA),All Editions,quarter_page,Jacket Page 1,16x25,5,3693628.27
+20-Jul-25,Jupiter,WIP_TVS_0322,Andhra Pradesh,EENADU,All Editions,quarter_page,Page 3,16x25,6,2531265.3
+20-Jul-25,Jupiter,WIP_TVS_0323,Andhra Pradesh,SIYASAT,All editions,strip,Jacket Page 1,33x5,11,4355850.83
+15-Aug-25,iQube,WIP_TVS_0324,Uttar Pradesh,I NEXT - JAGRAN,All Editions,full_page,Front Page,33x45,9,21706356.07
+15-Aug-25,iQube,WIP_TVS_0325,Chandigarh,JAGBANI - PUNJAB,All editions,strip,Page 3,12x20,2,632339.24
+15-Aug-25,iQube,WIP_TVS_0326,Chandigarh,DAINIK JAGRAN,All editions,strip,Front Page,12x20,10,3417428.74
+15-Aug-25,iQube,WIP_TVS_0327,Chandigarh,PUNJAB KESARI,All Editions,quarter_page,Inside Page,16x25,2,512949.81
+15-Aug-25,iQube,WIP_TVS_0328,Rajasthan,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,6,1864324.72
+15-Aug-25,iQube,WIP_TVS_0329,Jammu & Kashmir,PUNJAB KESARI,All editions,strip,Page 3,33x5,6,2044203.84
+15-Aug-25,iQube,WIP_TVS_0330,Jammu & Kashmir,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,8,1369983.98
+15-Aug-25,iQube,WIP_TVS_0331,Chhattisgarh,HARI BHOOMI,All editions,quarter_page,Page 3,16x25,1,698437.8
+15-Aug-25,iQube,WIP_TVS_0332,Chhattisgarh,NAI DUNIA (I),All editions,strip,Page 3,33x5,9,2677634.74
+15-Aug-25,iQube,WIP_TVS_0333,Chhattisgarh,DAINIK BHASKAR,All Editions,quarter_page,Front Page,16x25,4,2763892.06
+15-Aug-25,iQube,WIP_TVS_0334,Gujarat,DIVYA BHASKAR,All editions,strip,Front Page,12x20,12,4303666.34
+15-Aug-25,iQube,WIP_TVS_0335,Karnataka,THE ECONOMIC TIMES,All editions,quarter_page,Inside Page,16x25,5,3755170.79
+15-Aug-25,iQube,WIP_TVS_0336,Karnataka,VIJAY KARNATAKA,All editions,strip,Front Page,12x20,6,1241543.82
+15-Aug-25,iQube,WIP_TVS_0337,West Bengal,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,10,2630935.02
+15-Aug-25,iQube,WIP_TVS_0338,Tamil Nadu,DAILY THANTHI,All Editions,half_page,Inside Page,33x25,10,9329982.21
+15-Aug-25,iQube,WIP_TVS_0339,Tamil Nadu,DINAMALAR - CHENNAI,All Editions,strip,Front Page,33x5,2,561938.12
+15-Aug-25,iQube,WIP_TVS_0340,Tamil Nadu,DINAMALAR - T,All editions,strip,Front Page,33x5,10,3888240.64
+15-Aug-25,iQube,WIP_TVS_0341,Orissa,SAMBAD,All Editions,quarter_page,Front Page,16x25,8,4105573.06
+15-Aug-25,iQube,WIP_TVS_0342,Orissa,THE SAMAJA - DAILY,All editions,quarter_page,Front Page,16x25,4,2774556.29
+15-Aug-25,iQube,WIP_TVS_0343,Kerala,MATHRUBHUMI,All Editions,strip,Front Page,12x20,8,1291882.26
+15-Aug-25,iQube,WIP_TVS_0344,Kerala,VANITHA - MALAYALAM,All Editions,strip,Inside Page,33x5,1,306229.23
+15-Aug-25,iQube,WIP_TVS_0345,Kerala,MALAYALA MANORAMA,All Editions,strip,Inside Page,33x5,9,3558884.84
+15-Aug-25,iQube,WIP_TVS_0346,Haryana,PUNJAB KESARI,All Editions,strip,Page 3,12x20,9,3628788.61
+15-Aug-25,iQube,WIP_TVS_0347,National,TOI.COM (PAN INDIA),All editions,quarter_page,Jacket Page 1,16x25,12,9364650.34
+15-Aug-25,iQube,WIP_TVS_0348,Uttaranchal,I NEXT - JAGRAN,All Editions,half_page,Front Page,33x25,6,9491796.21
+15-Aug-25,iQube,WIP_TVS_0349,Goa,GOMANTAK,All Editions,strip,Inside Page,33x5,12,4413217
+15-Aug-25,iQube,WIP_TVS_0350,Goa,LOKMAT,All editions,strip,Front Page,33x5,1,469112.75
+15-Aug-25,Apache,WIP_TVS_0351,National,TOI.COM (PAN INDIA),All editions,full_page,Page 3,33x45,12,28830206.37
+15-Aug-25,Apache,WIP_TVS_0352,Madhya Pradesh,NAI DUNIA (I),All Editions,half_page,Inside Page,33x25,8,5353432.42
+15-Aug-25,Apache,WIP_TVS_0353,Jharkhand,I NEXT - JAGRAN,All editions,quarter_page,Inside Page,16x25,7,4391217.72
+15-Aug-25,Apache,WIP_TVS_0354,Jharkhand,DAINIK JAGRAN,All Editions,strip,Page 3,12x20,8,1948207.33
+15-Aug-25,Apache,WIP_TVS_0355,Haryana,DAINIK JAGRAN,All editions,strip,Inside Page,12x20,9,2030043.61
+15-Aug-25,Apache,WIP_TVS_0356,Haryana,PUNJAB KESARI,All Editions,quarter_page,Front Page,16x25,6,4024366.94
+15-Aug-25,Apache,WIP_TVS_0357,Jammu & Kashmir,DAINIK JAGRAN,All editions,strip,Page 3,12x20,1,184990.19
+15-Aug-25,Apache,WIP_TVS_0358,Jammu & Kashmir,PUNJAB KESARI,All editions,half_page,Front Page,33x25,8,6265752.09
+15-Aug-25,Apache,WIP_TVS_0359,Uttaranchal,DAINIK JAGRAN,All Editions,half_page,Front Page,33x25,2,2240308.11
+15-Aug-25,Apache,WIP_TVS_0360,Uttaranchal,I NEXT - JAGRAN,All editions,strip,Inside Page,33x5,1,428285.42
+15-Aug-25,Apache,WIP_TVS_0361,Himachal Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,1,408072.73
+15-Aug-25,Apache,WIP_TVS_0362,Kerala,MATHRUBHUMI,All editions,strip,Inside Page,33x5,1,428348.19
+15-Aug-25,Apache,WIP_TVS_0363,Orissa,SAMBAD,All editions,strip,Front Page,33x5,2,689975.66
+15-Aug-25,Apache,WIP_TVS_0364,Orissa,THE SAMAJA - DAILY,All editions,strip,Front Page,33x5,11,2501831.54
+15-Aug-25,Apache,WIP_TVS_0365,Chhattisgarh,DAINIK BHASKAR,All editions,quarter_page,Front Page,16x25,7,4686453.55
+15-Aug-25,Apache,WIP_TVS_0366,Chhattisgarh,NAI DUNIA (I),All editions,half_page,Front Page,33x25,3,3284089.4
+15-Aug-25,Apache,WIP_TVS_0367,Chhattisgarh,HARI BHOOMI,All Editions,strip,Front Page,12x20,6,1835337.49
+15-Aug-25,Apache,WIP_TVS_0368,Goa,LOKMAT,All Editions,strip,Inside Page,33x5,12,2926215.97
+15-Aug-25,Apache,WIP_TVS_0369,Goa,GOMANTAK,All editions,strip,Front Page,12x20,12,2784345.59
+15-Aug-25,Apache,WIP_TVS_0370,Gujarat,DIVYA BHASKAR,All Editions,quarter_page,Front Page,16x25,11,5571262.52
+05-Sep-25,iQube,WIP_TVS_0371,Delhi,DAINIK JAGRAN,All editions,strip,Front Page,12x20,1,322956.24
+05-Sep-25,iQube,WIP_TVS_0372,Delhi,SAKSHI,All Editions,strip,Front Page,12x20,7,2246441.68
+05-Sep-25,iQube,WIP_TVS_0373,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,33x5,3,1343620.12
+05-Sep-25,iQube,WIP_TVS_0374,Haryana,PUNJAB KESARI,All editions,strip,Inside Page,12x20,5,1624111.58
+05-Sep-25,iQube,WIP_TVS_0375,West Bengal,DAINIK JAGRAN,All editions,strip,Page 3,33x5,8,1691139.3
+05-Sep-25,iQube,WIP_TVS_0376,Goa,LOKMAT,All editions,strip,Front Page,33x5,3,1630996.92
+05-Sep-25,iQube,WIP_TVS_0377,Goa,GOMANTAK,All Editions,quarter_page,Inside Page,16x25,3,1263310
+05-Sep-25,iQube,WIP_TVS_0378,Goa,GOMANTAK TIMES,All editions,strip,Front Page,12x20,1,267035.68
+05-Sep-25,iQube,WIP_TVS_0379,Maharashtra,SAKAL,All editions,strip,Jacket Page 1,33x5,8,3524366.45
+05-Sep-25,iQube,WIP_TVS_0380,Maharashtra,DIVYA BHASKAR,All editions,strip,Page 3,33x5,6,1528833.4
+05-Sep-25,iQube,WIP_TVS_0381,Gujarat,THE ECONOMIC TIMES,All editions,strip,Front Page,12x20,1,429553.79
+05-Sep-25,iQube,WIP_TVS_0382,Uttaranchal,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,3,2799995.81
+05-Sep-25,iQube,WIP_TVS_0383,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,5,1238631.73
+20-Sep-25,Apache,WIP_TVS_0384,Kerala,VANITHA - MALAYALAM,All editions,quarter_page,Front Page,16x25,6,2228579.89
+20-Sep-25,Apache,WIP_TVS_0385,Kerala,MATHRUBHUMI,All editions,strip,Inside Page,12x20,8,2044657.55
+20-Sep-25,Apache,WIP_TVS_0386,Pondicherry,DAILY THANTHI,All editions,strip,Page 3,33x5,4,1816788.94
+20-Sep-25,Apache,WIP_TVS_0387,Pondicherry,DINAMALAR - CHENNAI,All Editions,half_page,Page 3,33x25,1,1377327.35
+20-Sep-25,Apache,WIP_TVS_0388,Bihar,I NEXT - JAGRAN,All Editions,strip,Jacket Page 1,33x5,8,2201139.69
+20-Sep-25,Apache,WIP_TVS_0389,Bihar,DAINIK JAGRAN,All editions,strip,Front Page,33x5,4,1824282.53
+20-Sep-25,Apache,WIP_TVS_0390,Jharkhand,I NEXT - JAGRAN,All Editions,strip,Front Page,12x20,2,626878.99
+20-Sep-25,Apache,WIP_TVS_0391,Jharkhand,DAINIK JAGRAN,All editions,quarter_page,Jacket Page 1,16x25,5,2490752.08
+20-Sep-25,Apache,WIP_TVS_0392,Punjab,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,4,1651776.28
+20-Sep-25,Apache,WIP_TVS_0393,Punjab,JAGBANI - PUNJAB,All editions,strip,Front Page,12x20,8,2015415.62
+20-Sep-25,Apache,WIP_TVS_0394,Uttaranchal,I NEXT - JAGRAN,All Editions,full_page,Front Page,33x45,8,14200897.72
+20-Sep-25,Apache,WIP_TVS_0395,Uttar Pradesh,DAINIK JAGRAN,All editions,half_page,Front Page,33x25,4,6291454.09
+20-Sep-25,Apache,WIP_TVS_0396,Goa,GOMANTAK,All Editions,strip,Jacket Page 1,12x20,9,1569352.05
+20-Sep-25,Apache,WIP_TVS_0397,Chhattisgarh,DAINIK BHASKAR,All editions,full_page,Page 3,33x45,2,3310880.74
+20-Sep-25,Apache,WIP_TVS_0398,Chhattisgarh,NAI DUNIA (I),All editions,strip,Front Page,12x20,4,648065.89
+02-Oct-25,Jupiter,WIP_TVS_0399,Delhi,NAVODAY TIMES,All editions,strip,Page 3,33x5,3,1446163.43
+02-Oct-25,Jupiter,WIP_TVS_0400,Pondicherry,DINAMALAR - CHENNAI,All Editions,quarter_page,Front Page,16x25,4,2716312.2
+02-Oct-25,Jupiter,WIP_TVS_0401,Pondicherry,DAILY THANTHI,All editions,strip,Page 3,33x5,10,3482357.08
+02-Oct-25,Jupiter,WIP_TVS_0402,Tamil Nadu,SAKSHI,All Editions,quarter_page,Front Page,16x25,3,1371931.16
+02-Oct-25,Jupiter,WIP_TVS_0403,Tamil Nadu,DINAMALAR - T,All editions,half_page,Front Page,33x25,7,10027843.05
+02-Oct-25,Jupiter,WIP_TVS_0404,Uttar Pradesh,I NEXT - JAGRAN,All Editions,full_page,Front Page,33x45,5,5580186.68
+02-Oct-25,Jupiter,WIP_TVS_0405,Uttar Pradesh,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,1,433153.39
+02-Oct-25,Jupiter,WIP_TVS_0406,Chhattisgarh,HARI BHOOMI,All Editions,strip,Inside Page,33x5,9,2281787.17
+02-Oct-25,Jupiter,WIP_TVS_0407,Chhattisgarh,DAINIK BHASKAR,All Editions,full_page,Front Page,33x45,6,20178482.02
+02-Oct-25,Jupiter,WIP_TVS_0408,Chhattisgarh,NAI DUNIA (I),All Editions,half_page,Front Page,33x25,12,13943397.36
+02-Oct-25,Jupiter,WIP_TVS_0409,Maharashtra,AGROWON,All Editions,strip,Front Page,12x20,9,1809318.32
+02-Oct-25,Jupiter,WIP_TVS_0410,Maharashtra,MIDDAY,All editions,strip,Front Page,33x5,1,471819.02
+02-Oct-25,Jupiter,WIP_TVS_0411,Maharashtra,LOKMAT,All editions,quarter_page,Inside Page,16x25,6,3532089.01
+02-Oct-25,Jupiter,WIP_TVS_0412,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Front Page,33x5,2,1089182.74
+02-Oct-25,Jupiter,WIP_TVS_0413,National,TOI.COM (PAN INDIA),All editions,strip,Inside Page,12x20,6,1277088.02
+02-Oct-25,Jupiter,WIP_TVS_0414,Andhra Pradesh,SIYASAT,All Editions,strip,Jacket Page 1,12x20,3,1194799.08
+02-Oct-25,Jupiter,WIP_TVS_0415,Bihar,I NEXT - JAGRAN,All Editions,strip,Page 3,12x20,5,1841148.26
+02-Oct-25,Jupiter,WIP_TVS_0416,Bihar,DAINIK JAGRAN,All Editions,strip,Inside Page,33x5,10,1893846.21
+02-Oct-25,Jupiter,WIP_TVS_0417,Orissa,SAMBAD,All editions,full_page,Front Page,33x45,4,8242405.04
+02-Oct-25,Jupiter,WIP_TVS_0418,Orissa,THE SAMAJA - DAILY,All editions,strip,Page 3,33x5,12,4416018.28
+02-Oct-25,Jupiter,WIP_TVS_0419,Haryana,DAINIK JAGRAN,All editions,strip,Front Page,12x20,12,1477959.59
+02-Oct-25,Jupiter,WIP_TVS_0420,Haryana,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,7,4506642.06
+02-Oct-25,Jupiter,WIP_TVS_0421,Punjab,PUNJAB KESARI,All editions,strip,Front Page,33x5,3,1086467.78
+02-Oct-25,Jupiter,WIP_TVS_0422,Punjab,JAGBANI - PUNJAB,All Editions,half_page,Front Page,33x25,5,6305293.21
+02-Oct-25,Jupiter,WIP_TVS_0423,Kerala,MALAYALA MANORAMA,All editions,strip,Front Page,33x5,6,2940941.1
+02-Oct-25,Jupiter,WIP_TVS_0424,Kerala,VANITHA - MALAYALAM,All Editions,quarter_page,Inside Page,16x25,3,827251.75
+02-Oct-25,TVS Brand,WIP_TVS_0425,Chandigarh,PUNJAB KESARI,All editions,strip,Front Page,33x5,5,1987758.13
+02-Oct-25,TVS Brand,WIP_TVS_0426,Chandigarh,JAGBANI - PUNJAB,All Editions,strip,Front Page,33x5,2,1019859.77
+02-Oct-25,TVS Brand,WIP_TVS_0427,Chandigarh,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,11,4038669.53
+02-Oct-25,TVS Brand,WIP_TVS_0428,Gujarat,SANDESH,All Editions,half_page,Front Page,33x25,1,757378.38
+02-Oct-25,TVS Brand,WIP_TVS_0429,Gujarat,DIVYA BHASKAR,All editions,strip,Page 3,33x5,3,627464.19
+02-Oct-25,TVS Brand,WIP_TVS_0430,Gujarat,GUJARAT SAMACHAR,All editions,quarter_page,Front Page,16x25,9,3395044.65
+02-Oct-25,TVS Brand,WIP_TVS_0431,Madhya Pradesh,NAI DUNIA (I),All Editions,strip,Front Page,12x20,2,588671.61
+02-Oct-25,TVS Brand,WIP_TVS_0432,Madhya Pradesh,DAINIK BHASKAR,All editions,strip,Front Page,12x20,2,879743.94
+02-Oct-25,TVS Brand,WIP_TVS_0433,Pondicherry,DAILY THANTHI,All editions,full_page,Page 3,33x45,1,1569484.98
+02-Oct-25,TVS Brand,WIP_TVS_0434,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Page 3,33x5,10,3110375.79
+02-Oct-25,TVS Brand,WIP_TVS_0435,Jammu & Kashmir,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,5,2814422.82
+02-Oct-25,TVS Brand,WIP_TVS_0436,Jammu & Kashmir,PUNJAB KESARI,All Editions,half_page,Inside Page,33x25,2,1607199.86
+02-Oct-25,TVS Brand,WIP_TVS_0437,Maharashtra,SAKSHI,All Editions,strip,Front Page,12x20,9,3212505.22
+02-Oct-25,TVS Brand,WIP_TVS_0438,Maharashtra,DIVYA BHASKAR,All Editions,quarter_page,Front Page,16x25,10,6125944.2
+02-Oct-25,TVS Brand,WIP_TVS_0439,Maharashtra,SAKAL,All Editions,strip,Front Page,33x5,1,471011
+02-Oct-25,TVS Brand,WIP_TVS_0440,Punjab,PUNJAB KESARI,All Editions,strip,Front Page,33x5,6,1181690.31
+02-Oct-25,TVS Brand,WIP_TVS_0441,Punjab,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,12,3318832.7
+02-Oct-25,TVS Brand,WIP_TVS_0442,Orissa,SAMBAD,All Editions,quarter_page,Inside Page,16x25,5,3296961.36
+02-Oct-25,TVS Brand,WIP_TVS_0443,Andhra Pradesh,ANDHRA JYOTHI,All Editions,strip,Page 3,33x5,9,4022008
+02-Oct-25,TVS Brand,WIP_TVS_0444,Andhra Pradesh,SIYASAT,All Editions,quarter_page,Front Page,16x25,12,6526125.09
+02-Oct-25,TVS Brand,WIP_TVS_0445,Andhra Pradesh,EENADU,All editions,strip,Front Page,12x20,3,691875.4
+02-Oct-25,TVS Brand,WIP_TVS_0446,Uttaranchal,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,12,3322444.85
+15-Oct-25,iQube,WIP_TVS_0447,Kerala,MALAYALA MANORAMA,All Editions,strip,Inside Page,12x20,1,206059.62
+15-Oct-25,iQube,WIP_TVS_0448,Kerala,VANITHA - MALAYALAM,All editions,half_page,Inside Page,33x25,4,4196835.44
+15-Oct-25,iQube,WIP_TVS_0449,Goa,GOMANTAK TIMES,All editions,strip,Front Page,12x20,8,2653949.76
+15-Oct-25,iQube,WIP_TVS_0450,Tamil Nadu,DAILY THANTHI,All Editions,strip,Inside Page,33x5,12,4006575.91
+15-Oct-25,iQube,WIP_TVS_0451,Orissa,THE SAMAJA - DAILY,All Editions,strip,Front Page,33x5,10,2036582.58
+15-Oct-25,iQube,WIP_TVS_0452,Orissa,SAMBAD,All Editions,full_page,Jacket Page 1,33x45,9,22014038.55
+15-Oct-25,iQube,WIP_TVS_0453,Andhra Pradesh,SAKSHI,All Editions,strip,Front Page,33x5,11,4664362.94
+15-Oct-25,iQube,WIP_TVS_0454,Andhra Pradesh,SIYASAT,All Editions,strip,Inside Page,33x5,4,1122132.95
+15-Oct-25,iQube,WIP_TVS_0455,Punjab,DAINIK JAGRAN,All Editions,half_page,Page 3,33x25,11,9850382.32
+15-Oct-25,iQube,WIP_TVS_0456,Delhi,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,12,2709286.03
+15-Oct-25,iQube,WIP_TVS_0457,Delhi,NAVODAY TIMES,All Editions,full_page,Page 3,33x45,12,26626147.65
+15-Oct-25,iQube,WIP_TVS_0458,Delhi,SAKSHI,All Editions,quarter_page,Inside Page,16x25,9,4685258.22
+15-Oct-25,iQube,WIP_TVS_0459,Karnataka,BANGALORE TIMES - TOI,All Editions,strip,Front Page,33x5,12,6539403.04
+15-Oct-25,iQube,WIP_TVS_0460,Karnataka,PRAJAVANI,All Editions,strip,Inside Page,33x5,11,2413365.54
+15-Oct-25,iQube,WIP_TVS_0461,Karnataka,SAKSHI,All Editions,strip,Page 3,33x5,6,2142294.01
+15-Oct-25,iQube,WIP_TVS_0462,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,quarter_page,Page 3,16x25,8,5381477.87
+15-Oct-25,iQube,WIP_TVS_0463,Rajasthan,PUNJAB KESARI,All Editions,strip,Inside Page,33x5,7,1835515.3
+15-Oct-25,iQube,WIP_TVS_0464,Chhattisgarh,DAINIK BHASKAR,All Editions,full_page,Front Page,33x45,3,5713924.53
+15-Oct-25,iQube,WIP_TVS_0465,Gujarat,DAINIK BHASKAR,All editions,quarter_page,Inside Page,16x25,6,3124854.9
+15-Oct-25,iQube,WIP_TVS_0466,Maharashtra,LOKMAT TIMES,All editions,strip,Front Page,12x20,8,3146825.36
+15-Oct-25,iQube,WIP_TVS_0467,Maharashtra,LOKMAT SAMACHAR,All Editions,strip,Inside Page,33x5,7,3528175.53
+15-Oct-25,iQube,WIP_TVS_0468,Jammu & Kashmir,DAINIK JAGRAN,All editions,quarter_page,Inside Page,16x25,6,4738105.76
+15-Oct-25,iQube,WIP_TVS_0469,Jammu & Kashmir,PUNJAB KESARI,All editions,strip,Inside Page,33x5,4,1407742.34
+15-Oct-25,iQube,WIP_TVS_0470,Himachal Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,1,538204.25
+15-Oct-25,iQube,WIP_TVS_0471,Jharkhand,I NEXT - JAGRAN,All Editions,half_page,Jacket Page 1,33x25,8,7715293.06
+15-Oct-25,iQube,WIP_TVS_0472,Jharkhand,DAINIK JAGRAN,All Editions,strip,Page 3,33x5,1,284496.04
+24-Oct-25,Jupiter,WIP_TVS_0473,Chandigarh,JAGBANI - PUNJAB,All editions,strip,Inside Page,12x20,1,279972.31
+24-Oct-25,Jupiter,WIP_TVS_0474,Chandigarh,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,8,4602393.57
+24-Oct-25,Jupiter,WIP_TVS_0475,Chandigarh,PUNJAB KESARI,All Editions,strip,Inside Page,12x20,7,1902779.29
+24-Oct-25,Jupiter,WIP_TVS_0476,Andhra Pradesh,SAKSHI,All editions,quarter_page,Page 3,16x25,5,2003774.11
+24-Oct-25,Jupiter,WIP_TVS_0477,Andhra Pradesh,SIYASAT,All Editions,quarter_page,Inside Page,16x25,9,3444080.61
+24-Oct-25,Jupiter,WIP_TVS_0478,Andhra Pradesh,ANDHRA JYOTHI,All Editions,quarter_page,Front Page,16x25,4,3101213.49
+24-Oct-25,Jupiter,WIP_TVS_0479,Maharashtra,LOKMAT SAMACHAR,All editions,strip,Front Page,33x5,10,3946276.31
+24-Oct-25,Jupiter,WIP_TVS_0480,Maharashtra,AGROWON,All editions,strip,Front Page,33x5,5,1578187.51
+24-Oct-25,Jupiter,WIP_TVS_0481,Kerala,VANITHA - MALAYALAM,All editions,strip,Page 3,33x5,5,2178834.91
+24-Oct-25,Jupiter,WIP_TVS_0482,Kerala,MATHRUBHUMI,All editions,quarter_page,Inside Page,16x25,1,348024.84
+24-Oct-25,Jupiter,WIP_TVS_0483,Jharkhand,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,12,3971575.88
+24-Oct-25,Jupiter,WIP_TVS_0484,Jharkhand,I NEXT - JAGRAN,All Editions,quarter_page,Front Page,16x25,8,4015526.35
+24-Oct-25,Jupiter,WIP_TVS_0485,Orissa,THE SAMAJA - DAILY,All editions,strip,Inside Page,12x20,3,1087824.95
+24-Oct-25,Jupiter,WIP_TVS_0486,Orissa,SAMBAD,All editions,full_page,Page 3,33x45,7,21116549.74
+24-Oct-25,Jupiter,WIP_TVS_0487,Delhi,SAKSHI,All editions,strip,Inside Page,12x20,11,4754438.46
+24-Oct-25,Jupiter,WIP_TVS_0488,Delhi,NAVODAY TIMES,All Editions,full_page,Front Page,33x45,2,5519755.69
+24-Oct-25,Jupiter,WIP_TVS_0489,Delhi,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,1,526002.04
+24-Oct-25,Jupiter,WIP_TVS_0490,Bihar,DAINIK JAGRAN,All editions,quarter_page,Inside Page,16x25,7,4939053.01
+24-Oct-25,Jupiter,WIP_TVS_0491,Bihar,I NEXT - JAGRAN,All Editions,quarter_page,Inside Page,16x25,3,2509517.26
+24-Oct-25,Jupiter,WIP_TVS_0492,Goa,GOMANTAK,All Editions,quarter_page,Front Page,16x25,3,1120107.15
+24-Oct-25,Jupiter,WIP_TVS_0493,Goa,LOKMAT,All Editions,quarter_page,Front Page,16x25,1,503021.6
+24-Oct-25,Jupiter,WIP_TVS_0494,Goa,GOMANTAK TIMES,All editions,strip,Front Page,12x20,2,528625.26
+24-Oct-25,Jupiter,WIP_TVS_0495,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,half_page,Front Page,33x25,8,10880434.07
+24-Oct-25,Jupiter,WIP_TVS_0496,Rajasthan,PUNJAB KESARI,All editions,strip,Front Page,33x5,2,831651.38
+24-Oct-25,TVS Brand,WIP_TVS_0497,Chandigarh,JAGBANI - PUNJAB,All Editions,strip,Front Page,12x20,6,2323198.88
+24-Oct-25,TVS Brand,WIP_TVS_0498,Chandigarh,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,12,1746646.07
+24-Oct-25,TVS Brand,WIP_TVS_0499,Chandigarh,PUNJAB KESARI,All Editions,strip,Front Page,33x5,2,696199.29
+24-Oct-25,TVS Brand,WIP_TVS_0500,Tamil Nadu,DAILY THANTHI,All Editions,full_page,Front Page,33x45,4,9363753.04
+24-Oct-25,TVS Brand,WIP_TVS_0501,Pondicherry,DAILY THANTHI,All editions,strip,Front Page,12x20,8,1223781.36
+24-Oct-25,TVS Brand,WIP_TVS_0502,Pondicherry,DINAMALAR - CHENNAI,All Editions,strip,Page 3,33x5,9,2838408.72
+24-Oct-25,TVS Brand,WIP_TVS_0503,Rajasthan,PUNJAB KESARI,All Editions,strip,Inside Page,33x5,9,3497453.08
+24-Oct-25,TVS Brand,WIP_TVS_0504,Haryana,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,8,4928566.8
+24-Oct-25,TVS Brand,WIP_TVS_0505,Haryana,PUNJAB KESARI,All Editions,quarter_page,Inside Page,16x25,12,8063185.71
+24-Oct-25,TVS Brand,WIP_TVS_0506,Delhi,SAKSHI,All Editions,strip,Inside Page,33x5,11,3536028.47
+24-Oct-25,TVS Brand,WIP_TVS_0507,Delhi,DAINIK JAGRAN,All Editions,strip,Jacket Page 1,12x20,12,2388649.05
+24-Oct-25,TVS Brand,WIP_TVS_0508,Delhi,NAVODAY TIMES,All Editions,strip,Front Page,12x20,11,4406245.52
+24-Oct-25,TVS Brand,WIP_TVS_0509,Bihar,I NEXT - JAGRAN,All editions,half_page,Front Page,33x25,7,3750294.42
+24-Oct-25,TVS Brand,WIP_TVS_0510,Bihar,DAINIK JAGRAN,All editions,strip,Front Page,33x5,5,1422506.78
+24-Oct-25,TVS Brand,WIP_TVS_0511,Punjab,PUNJAB KESARI,All editions,strip,Front Page,12x20,6,2139007.73
+24-Oct-25,TVS Brand,WIP_TVS_0512,Uttar Pradesh,DAINIK JAGRAN,All Editions,strip,Inside Page,33x5,12,3155406.16
+24-Oct-25,TVS Brand,WIP_TVS_0513,Uttar Pradesh,I NEXT - JAGRAN,All Editions,quarter_page,Jacket Page 1,16x25,9,2378409.41
+24-Oct-25,TVS Brand,WIP_TVS_0514,Jharkhand,DAINIK JAGRAN,All Editions,half_page,Page 3,33x25,10,11755256.82
+24-Oct-25,TVS Brand,WIP_TVS_0515,Jharkhand,I NEXT - JAGRAN,All editions,strip,Inside Page,33x5,5,1895701.83
+24-Oct-25,TVS Brand,WIP_TVS_0516,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Front Page,33x5,7,1504827.78
+24-Oct-25,TVS Brand,WIP_TVS_0517,Goa,GOMANTAK TIMES,All Editions,strip,Front Page,12x20,8,3158770.03
+24-Oct-25,TVS Brand,WIP_TVS_0518,Goa,GOMANTAK,All editions,strip,Page 3,33x5,11,3921921.37
+24-Oct-25,TVS Brand,WIP_TVS_0519,Goa,LOKMAT,All Editions,strip,Front Page,12x20,9,2210583.7
+24-Oct-25,TVS Brand,WIP_TVS_0520,Jammu & Kashmir,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,6,2878582.62
+24-Oct-25,TVS Brand,WIP_TVS_0521,Jammu & Kashmir,PUNJAB KESARI,All Editions,strip,Front Page,12x20,4,1757810.69
+24-Oct-25,TVS Brand,WIP_TVS_0522,Maharashtra,NAVA BHARAT,All editions,strip,Front Page,33x5,11,4268131.73
+24-Oct-25,TVS Brand,WIP_TVS_0523,Maharashtra,SAKAL,All editions,strip,Front Page,12x20,7,1545318.82
+24-Oct-25,TVS Brand,WIP_TVS_0524,Maharashtra,AGROWON,All Editions,strip,Page 3,33x5,9,4109031.55
+24-Oct-25,TVS Brand,WIP_TVS_0525,Kerala,VANITHA - MALAYALAM,All editions,half_page,Front Page,33x25,2,1605930
+24-Oct-25,TVS Brand,WIP_TVS_0526,Karnataka,BANGALORE TIMES - TOI,All editions,strip,Inside Page,33x5,11,5270341.03
+24-Oct-25,TVS Brand,WIP_TVS_0527,Karnataka,ANDHRA JYOTHI,All Editions,strip,Page 3,33x5,11,2874259.76
+24-Oct-25,TVS Brand,WIP_TVS_0528,Karnataka,BANGALORE MIRROR - VK,All Editions,strip,Front Page,33x5,1,203913.07
+01-Nov-25,Jupiter,WIP_TVS_0529,Himachal Pradesh,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,9,2882138.77
+01-Nov-25,Jupiter,WIP_TVS_0530,Madhya Pradesh,DAINIK BHASKAR,All editions,strip,Front Page,12x20,5,1913838.95
+01-Nov-25,Jupiter,WIP_TVS_0531,Madhya Pradesh,NAI DUNIA (I),All Editions,strip,Front Page,12x20,7,2003743.01
+01-Nov-25,Jupiter,WIP_TVS_0532,Chhattisgarh,HARI BHOOMI,All Editions,strip,Front Page,33x5,9,3779353.79
+01-Nov-25,Jupiter,WIP_TVS_0533,Maharashtra,LOKMAT TIMES,All Editions,strip,Page 3,12x20,1,339340.94
+01-Nov-25,Jupiter,WIP_TVS_0534,Punjab,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,9,5167291.42
+01-Nov-25,Jupiter,WIP_TVS_0535,Uttaranchal,DAINIK JAGRAN,All editions,strip,Page 3,33x5,3,790063.09
+01-Nov-25,Jupiter,WIP_TVS_0536,Uttaranchal,I NEXT - JAGRAN,All editions,half_page,Front Page,33x25,11,15119858.48
+01-Nov-25,Jupiter,WIP_TVS_0537,Gujarat,THE ECONOMIC TIMES,All Editions,quarter_page,Front Page,16x25,11,3320652.8
+01-Nov-25,Jupiter,WIP_TVS_0538,Goa,LOKMAT,All Editions,strip,Jacket Page 1,12x20,3,1038744.55
+01-Nov-25,Jupiter,WIP_TVS_0539,Rajasthan,RAJASTHAN PATRIKA (MAIN),All Editions,strip,Page 3,12x20,8,1997787.99
+01-Nov-25,Jupiter,WIP_TVS_0540,Haryana,PUNJAB KESARI,All Editions,strip,Front Page,12x20,7,1090186.68
+01-Nov-25,Jupiter,WIP_TVS_0541,Haryana,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,5,1658244.65
+12-Nov-25,TVS Brand,WIP_TVS_0542,Karnataka,BANGALORE TIMES - TOI,All editions,strip,Inside Page,33x5,12,3325194.47
+12-Nov-25,TVS Brand,WIP_TVS_0543,Rajasthan,PUNJAB KESARI,All editions,strip,Front Page,12x20,9,1999035.65
+12-Nov-25,TVS Brand,WIP_TVS_0544,Rajasthan,RAJASTHAN PATRIKA (MAIN),All editions,full_page,Front Page,33x45,6,9728094.24
+12-Nov-25,TVS Brand,WIP_TVS_0545,Uttar Pradesh,I NEXT - JAGRAN,All Editions,quarter_page,Front Page,16x25,6,2718062.6
+12-Nov-25,TVS Brand,WIP_TVS_0546,Uttar Pradesh,DAINIK JAGRAN,All editions,strip,Jacket Page 1,33x5,9,2409376.45
+12-Nov-25,TVS Brand,WIP_TVS_0547,Delhi,SAKSHI,All editions,full_page,Inside Page,33x45,12,30220747.74
+12-Nov-25,TVS Brand,WIP_TVS_0548,Jammu & Kashmir,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,6,1036174.54
+12-Nov-25,TVS Brand,WIP_TVS_0549,Jammu & Kashmir,PUNJAB KESARI,All Editions,strip,Page 3,33x5,7,3645869.46
+12-Nov-25,TVS Brand,WIP_TVS_0550,Uttaranchal,DAINIK JAGRAN,All Editions,full_page,Front Page,33x45,12,19212409.13
+12-Nov-25,TVS Brand,WIP_TVS_0551,Madhya Pradesh,DAINIK BHASKAR,All editions,strip,Front Page,12x20,9,1847414.08
+12-Nov-25,TVS Brand,WIP_TVS_0552,Madhya Pradesh,NAI DUNIA (I),All Editions,full_page,Front Page,33x45,6,13545653.16
+12-Nov-25,TVS Brand,WIP_TVS_0553,Orissa,SAMBAD,All Editions,quarter_page,Front Page,16x25,4,1325331.32
+12-Nov-25,TVS Brand,WIP_TVS_0554,Orissa,THE SAMAJA - DAILY,All editions,quarter_page,Inside Page,16x25,11,4470354.93
+12-Nov-25,TVS Brand,WIP_TVS_0555,Jharkhand,DAINIK JAGRAN,All editions,strip,Front Page,12x20,11,3908618.26
+12-Nov-25,TVS Brand,WIP_TVS_0556,Jharkhand,I NEXT - JAGRAN,All editions,strip,Front Page,33x5,3,1147098.7
+12-Nov-25,TVS Brand,WIP_TVS_0557,Haryana,DAINIK JAGRAN,All Editions,strip,Page 3,33x5,10,5227673.25
+12-Nov-25,TVS Brand,WIP_TVS_0558,Haryana,PUNJAB KESARI,All Editions,half_page,Inside Page,33x25,2,1424680.04
+12-Nov-25,TVS Brand,WIP_TVS_0559,National,TOI.COM (PAN INDIA),All editions,strip,Page 3,33x5,10,3099156.78
+12-Nov-25,TVS Brand,WIP_TVS_0560,Bihar,I NEXT - JAGRAN,All Editions,strip,Front Page,12x20,10,2522507.04
+12-Nov-25,TVS Brand,WIP_TVS_0561,Bihar,DAINIK JAGRAN,All editions,quarter_page,Front Page,16x25,4,2626482.35
+12-Nov-25,TVS Brand,WIP_TVS_0562,West Bengal,DAINIK JAGRAN,All editions,half_page,Inside Page,33x25,8,12093975.88
+12-Nov-25,Raider,WIP_TVS_0563,Madhya Pradesh,NAI DUNIA (I),All Editions,quarter_page,Front Page,16x25,4,3551088.26
+12-Nov-25,Raider,WIP_TVS_0564,Madhya Pradesh,DAINIK BHASKAR,All editions,strip,Front Page,12x20,7,1168446.35
+12-Nov-25,Raider,WIP_TVS_0565,Kerala,MALAYALA MANORAMA,All Editions,strip,Page 3,33x5,5,1199675.84
+12-Nov-25,Raider,WIP_TVS_0566,Orissa,SAMBAD,All editions,quarter_page,Front Page,16x25,12,8022409.52
+12-Nov-25,Raider,WIP_TVS_0567,Orissa,THE SAMAJA - DAILY,All Editions,quarter_page,Front Page,16x25,5,3795301.26
+12-Nov-25,Raider,WIP_TVS_0568,Chhattisgarh,HARI BHOOMI,All Editions,strip,Front Page,12x20,3,758665.89
+12-Nov-25,Raider,WIP_TVS_0569,Chhattisgarh,NAI DUNIA (I),All Editions,quarter_page,Jacket Page 1,16x25,12,6680570.59
+12-Nov-25,Raider,WIP_TVS_0570,Chhattisgarh,DAINIK BHASKAR,All editions,half_page,Inside Page,33x25,8,11411816.36
+12-Nov-25,Raider,WIP_TVS_0571,Karnataka,BANGALORE MIRROR - VK,All Editions,strip,Front Page,33x5,9,1768010.91
+12-Nov-25,Raider,WIP_TVS_0572,West Bengal,DAINIK JAGRAN,All Editions,half_page,Page 3,33x25,10,7989443.44
+12-Nov-25,Raider,WIP_TVS_0573,Uttaranchal,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,7,3029198.58
+12-Nov-25,Raider,WIP_TVS_0574,Uttaranchal,I NEXT - JAGRAN,All editions,full_page,Front Page,33x45,11,21857496.78
+12-Nov-25,Raider,WIP_TVS_0575,Andhra Pradesh,SAKSHI,All editions,strip,Inside Page,33x5,10,3089642.64
+01-Dec-25,Jupiter,WIP_TVS_0576,Punjab,PUNJAB KESARI,All Editions,strip,Page 3,12x20,12,4514485.68
+01-Dec-25,Jupiter,WIP_TVS_0577,Tamil Nadu,DINAMALAR - T,All Editions,strip,Jacket Page 1,33x5,7,1281655.43
+01-Dec-25,Jupiter,WIP_TVS_0578,Tamil Nadu,DINAMALAR - CHENNAI,All editions,quarter_page,Front Page,16x25,9,3826731.55
+01-Dec-25,Jupiter,WIP_TVS_0579,Tamil Nadu,SAKSHI,All Editions,strip,Front Page,33x5,9,3211815.09
+01-Dec-25,Jupiter,WIP_TVS_0580,Andhra Pradesh,SIYASAT,All Editions,strip,Jacket Page 1,12x20,11,3450947.45
+01-Dec-25,Jupiter,WIP_TVS_0581,Andhra Pradesh,ANDHRA JYOTHI,All Editions,half_page,Front Page,33x25,2,1898893.33
+01-Dec-25,Jupiter,WIP_TVS_0582,Jharkhand,DAINIK JAGRAN,All Editions,half_page,Front Page,33x25,9,7681193.39
+01-Dec-25,Jupiter,WIP_TVS_0583,Chhattisgarh,DAINIK BHASKAR,All Editions,strip,Inside Page,33x5,2,1150852.09
+01-Dec-25,Jupiter,WIP_TVS_0584,Chhattisgarh,HARI BHOOMI,All Editions,quarter_page,Front Page,16x25,3,2624980.47
+01-Dec-25,Jupiter,WIP_TVS_0585,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Front Page,12x20,5,910430.65
+01-Dec-25,Jupiter,WIP_TVS_0586,Goa,LOKMAT,All editions,quarter_page,Inside Page,16x25,2,1547220.61
+01-Dec-25,Jupiter,WIP_TVS_0587,Delhi,SAKSHI,All editions,strip,Front Page,12x20,8,2073941.73
+01-Dec-25,Jupiter,WIP_TVS_0588,Delhi,DAINIK JAGRAN,All Editions,quarter_page,Jacket Page 1,16x25,8,3780650.28
+01-Dec-25,Jupiter,WIP_TVS_0589,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Front Page,33x5,9,3763868.32
+01-Dec-25,Jupiter,WIP_TVS_0590,Madhya Pradesh,DAINIK BHASKAR,All Editions,quarter_page,Front Page,16x25,11,6763426.43
+01-Dec-25,Jupiter,WIP_TVS_0591,Chandigarh,PUNJAB KESARI,All editions,quarter_page,Front Page,16x25,1,577823.47
+01-Dec-25,Jupiter,WIP_TVS_0592,Jammu & Kashmir,DAINIK JAGRAN,All editions,quarter_page,Page 3,16x25,9,3525974.71
+01-Dec-25,Jupiter,WIP_TVS_0593,Jammu & Kashmir,PUNJAB KESARI,All Editions,quarter_page,Inside Page,16x25,3,1633249.8
+01-Dec-25,Jupiter,WIP_TVS_0594,Orissa,THE SAMAJA - DAILY,All editions,half_page,Front Page,33x25,10,7597252.01
+01-Dec-25,Jupiter,WIP_TVS_0595,Orissa,SAMBAD,All Editions,strip,Page 3,12x20,4,1150260.46
+01-Dec-25,Jupiter,WIP_TVS_0596,Maharashtra,LOKMAT SAMACHAR,All Editions,half_page,Inside Page,33x25,1,663676.82
+01-Dec-25,Jupiter,WIP_TVS_0597,Maharashtra,LOKMAT,All Editions,strip,Page 3,33x5,8,2573702.48
+20-Dec-25,TVS Brand,WIP_TVS_0598,Bihar,DAINIK JAGRAN,All editions,strip,Page 3,33x5,10,4195085.53
+20-Dec-25,TVS Brand,WIP_TVS_0599,Bihar,I NEXT - JAGRAN,All Editions,strip,Front Page,12x20,12,3705572.18
+20-Dec-25,TVS Brand,WIP_TVS_0600,Goa,LOKMAT,All editions,quarter_page,Jacket Page 1,16x25,11,9322489.87
+20-Dec-25,TVS Brand,WIP_TVS_0601,Goa,GOMANTAK TIMES,All Editions,quarter_page,Inside Page,16x25,2,590618.48
+20-Dec-25,TVS Brand,WIP_TVS_0602,Orissa,THE SAMAJA - DAILY,All Editions,quarter_page,Front Page,16x25,10,6113000.77
+20-Dec-25,TVS Brand,WIP_TVS_0603,Jharkhand,I NEXT - JAGRAN,All editions,quarter_page,Front Page,16x25,3,1827644.37
+20-Dec-25,TVS Brand,WIP_TVS_0604,Jharkhand,DAINIK JAGRAN,All editions,strip,Inside Page,33x5,4,1102675.49
+20-Dec-25,TVS Brand,WIP_TVS_0605,Uttaranchal,DAINIK JAGRAN,All editions,full_page,Front Page,33x45,1,2508967.39
+20-Dec-25,TVS Brand,WIP_TVS_0606,Chandigarh,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,5,1439448.48
+20-Dec-25,TVS Brand,WIP_TVS_0607,Himachal Pradesh,DAINIK JAGRAN,All editions,strip,Front Page,12x20,1,169630.79
+20-Dec-25,TVS Brand,WIP_TVS_0608,Karnataka,VIJAYAVANI,All Editions,full_page,Front Page,33x45,9,14857122.79
+20-Dec-25,TVS Brand,WIP_TVS_0609,Karnataka,THE ECONOMIC TIMES,All Editions,full_page,Front Page,33x45,11,29812942.94
+20-Dec-25,TVS Brand,WIP_TVS_0610,Pondicherry,DINAMALAR - CHENNAI,All editions,full_page,Front Page,33x45,2,3557159.7
+20-Dec-25,TVS Brand,WIP_TVS_0611,Pondicherry,DAILY THANTHI,All editions,quarter_page,Front Page,16x25,1,646825.62
+20-Dec-25,TVS Brand,WIP_TVS_0612,Punjab,JAGBANI - PUNJAB,All Editions,strip,Front Page,33x5,8,2295760.28
+20-Dec-25,TVS Brand,WIP_TVS_0613,Delhi,NAVODAY TIMES,All editions,strip,Front Page,12x20,7,2733413.29
+20-Dec-25,TVS Brand,WIP_TVS_0614,Delhi,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,7,2633720.71
+20-Dec-25,TVS Brand,WIP_TVS_0615,Tamil Nadu,DINAMALAR - CHENNAI,All Editions,strip,Page 3,12x20,5,1755412.87
+20-Dec-25,TVS Brand,WIP_TVS_0616,Tamil Nadu,DINAMALAR - T,All editions,half_page,Front Page,33x25,3,1767366.09
+20-Dec-25,TVS Brand,WIP_TVS_0617,West Bengal,DAINIK JAGRAN,All Editions,strip,Front Page,12x20,4,756236.11
+20-Dec-25,TVS Brand,WIP_TVS_0618,Uttar Pradesh,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,3,1406716
+20-Dec-25,TVS Brand,WIP_TVS_0619,Haryana,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,7,2834180.25
+20-Dec-25,TVS Brand,WIP_TVS_0620,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Front Page,12x20,3,447924.57
+20-Dec-25,TVS Brand,WIP_TVS_0621,Madhya Pradesh,DAINIK BHASKAR,All editions,quarter_page,Front Page,16x25,4,3498976
+20-Dec-25,TVS Brand,WIP_TVS_0622,Gujarat,DAINIK BHASKAR,All Editions,full_page,Inside Page,33x45,8,13301201.6
+20-Dec-25,TVS Brand,WIP_TVS_0623,Gujarat,TIMES - CITI CENTRIC,All editions,strip,Front Page,33x5,9,2753317.16
+20-Dec-25,Apache,WIP_TVS_0624,Jammu & Kashmir,PUNJAB KESARI,All editions,strip,Inside Page,33x5,7,1841896.18
+20-Dec-25,Apache,WIP_TVS_0625,Jammu & Kashmir,DAINIK JAGRAN,All Editions,strip,Inside Page,33x5,12,3201502.02
+20-Dec-25,Apache,WIP_TVS_0626,Haryana,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,11,2097941.94
+20-Dec-25,Apache,WIP_TVS_0627,Jharkhand,DAINIK JAGRAN,All Editions,strip,Front Page,33x5,8,1948060.2
+20-Dec-25,Apache,WIP_TVS_0628,Jharkhand,I NEXT - JAGRAN,All Editions,quarter_page,Inside Page,16x25,1,600262.52
+20-Dec-25,Apache,WIP_TVS_0629,Tamil Nadu,DINAMALAR - T,All Editions,strip,Front Page,33x5,6,2433175.55
+20-Dec-25,Apache,WIP_TVS_0630,Tamil Nadu,SAKSHI,All editions,half_page,Page 3,33x25,2,1822180.93
+20-Dec-25,Apache,WIP_TVS_0631,Tamil Nadu,DINAMALAR - CHENNAI,All Editions,strip,Front Page,33x5,8,1779936.33
+20-Dec-25,Apache,WIP_TVS_0632,Bihar,I NEXT - JAGRAN,All Editions,half_page,Inside Page,33x25,10,6965656.15
+20-Dec-25,Apache,WIP_TVS_0633,Bihar,DAINIK JAGRAN,All Editions,strip,Jacket Page 1,33x5,4,2038232.9
+20-Dec-25,Apache,WIP_TVS_0634,Madhya Pradesh,DAINIK BHASKAR,All editions,quarter_page,Inside Page,16x25,2,1221615.78
+20-Dec-25,Apache,WIP_TVS_0635,Madhya Pradesh,NAI DUNIA (I),All editions,strip,Page 3,33x5,1,257858.88
+20-Dec-25,Apache,WIP_TVS_0636,Kerala,MALAYALA MANORAMA,All Editions,strip,Inside Page,33x5,11,5077287.89
+20-Dec-25,Apache,WIP_TVS_0637,Orissa,THE SAMAJA - DAILY,All editions,quarter_page,Inside Page,16x25,1,920357.44
+20-Dec-25,Apache,WIP_TVS_0638,Orissa,SAMBAD,All editions,strip,Page 3,12x20,8,3039880.06
+20-Dec-25,Apache,WIP_TVS_0639,Himachal Pradesh,DAINIK JAGRAN,All editions,half_page,Inside Page,33x25,10,7877667.22
+20-Dec-25,Apache,WIP_TVS_0640,Punjab,DAINIK JAGRAN,All editions,full_page,Jacket Page 1,33x45,2,4499151.22
+20-Dec-25,Apache,WIP_TVS_0641,Punjab,JAGBANI - PUNJAB,All editions,quarter_page,Front Page,16x25,10,7402359.9
+20-Dec-25,Apache,WIP_TVS_0642,Punjab,PUNJAB KESARI,All editions,strip,Front Page,12x20,11,3124359.94
+20-Dec-25,Apache,WIP_TVS_0643,Uttar Pradesh,I NEXT - JAGRAN,All Editions,strip,Front Page,33x5,9,3606352.61
+20-Dec-25,Apache,WIP_TVS_0644,Uttar Pradesh,DAINIK JAGRAN,All Editions,quarter_page,Front Page,16x25,6,4224431.56
+20-Dec-25,Apache,WIP_TVS_0645,West Bengal,DAINIK JAGRAN,All Editions,quarter_page,Inside Page,16x25,10,4369720.86
+20-Dec-25,Apache,WIP_TVS_0646,Maharashtra,BOMBAY TIMES,All Editions,strip,Page 3,12x20,6,1577721.02
+20-Dec-25,Apache,WIP_TVS_0647,Pondicherry,DAILY THANTHI,All editions,full_page,Front Page,33x45,5,4664042.12
+20-Dec-25,Apache,WIP_TVS_0648,Pondicherry,DINAMALAR - CHENNAI,All editions,strip,Page 3,33x5,12,4829579.86
+20-Dec-25,Apache,WIP_TVS_0649,Andhra Pradesh,EENADU,All Editions,quarter_page,Front Page,16x25,6,4749631.67
+20-Dec-25,Apache,WIP_TVS_0650,Andhra Pradesh,ANDHRA JYOTHI,All editions,strip,Page 3,33x5,10,4209248.48
+20-Dec-25,Apache,WIP_TVS_0651,Andhra Pradesh,SAKSHI,All Editions,strip,Front Page,33x5,8,2314296.11
+20-Dec-25,Apache,WIP_TVS_0652,Delhi,SAKSHI,All Editions,strip,Page 3,33x5,2,536032.52
+20-Dec-25,Apache,WIP_TVS_0653,Delhi,DAINIK JAGRAN,All Editions,quarter_page,Page 3,16x25,7,6325302.03
+20-Dec-25,Apache,WIP_TVS_0654,Delhi,NAVODAY TIMES,All editions,half_page,Front Page,33x25,11,15231980.15
+20-Dec-25,Apache,WIP_TVS_0655,National,TOI.COM (PAN INDIA),All editions,quarter_page,Front Page,16x25,6,3647834.29
+20-Dec-25,Apache,WIP_TVS_0656,Rajasthan,PUNJAB KESARI,All Editions,strip,Jacket Page 1,12x20,10,3013680.33
