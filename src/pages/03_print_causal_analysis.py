@@ -1,4 +1,4 @@
-"""Streamlit page: Print Spend → Sales Causal Analysis."""
+"""Streamlit page: Print Media Optimization Suite."""
 from __future__ import annotations
 
 import io
@@ -8,10 +8,21 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title="Print Causal Analysis | Havas Martech",
+    page_title="Print Media Optimization Suite | Havas Martech",
     page_icon="📊",
     layout="wide",
 )
+
+_OUTCOME_OPTIONS: dict[str, str] = {
+    "Enquiries (Leads)": "enquiries",
+    "Dealer Visits": "dealer_visits",
+    "Sales": "sales",
+}
+_OUTCOME_UNIT_LABEL: dict[str, str] = {
+    "enquiries": "enquiries",
+    "dealer_visits": "dealer visits",
+    "sales": "sales units",
+}
 
 # ── Havas theme ───────────────────────────────────────────────────────────────
 st.markdown(
@@ -150,6 +161,15 @@ def _to_excel(result) -> bytes:
         result.position_breakdown.to_excel(writer, sheet_name="Position", index=False)
         result.publication_breakdown.to_excel(writer, sheet_name="Publication", index=False)
         result.product_breakdown.to_excel(writer, sheet_name="Product", index=False)
+
+        recs = getattr(result, "recommendations", {}) or {}
+        scale_up = recs.get("combined_scale_up")
+        if scale_up is not None and not scale_up.empty:
+            scale_up.to_excel(writer, sheet_name="Recs - Scale Up", index=False)
+        avoid = recs.get("combined_avoid")
+        if avoid is not None and not avoid.empty:
+            avoid.to_excel(writer, sheet_name="Recs - Avoid", index=False)
+
         assumptions_df = pd.DataFrame({"assumption": result.assumptions})
         assumptions_df.to_excel(writer, sheet_name="Assumptions", index=False)
     return buf.getvalue()
@@ -166,8 +186,8 @@ with header_col:
     st.markdown(
         """
         <div class="page-header">
-            <h1>Print Spend → Sales Causal Analysis</h1>
-            <p>Estimate the Average Treatment Effect of Print media spend on daily regional sales using DoWhy.</p>
+            <h1>Print Media Optimization Suite</h1>
+            <p>Estimate the incremental impact of Print spend on enquiries, dealer visits, or sales — and surface the publications, sizes, and positions to scale up next.</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -181,6 +201,13 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown("### Analysis Config")
+    outcome_label = st.selectbox(
+        "Outcome metric",
+        options=list(_OUTCOME_OPTIONS.keys()),
+        index=0,
+        help="Funnel metric to model as the dependent variable.",
+    )
+    outcome_col = _OUTCOME_OPTIONS[outcome_label]
     max_lag = st.slider("Max Adstock Lag (days)", min_value=1, max_value=7, value=7)
 
     region_filter: list[str] = []
@@ -208,14 +235,15 @@ with st.sidebar:
 # ── Main area ─────────────────────────────────────────────────────────────────
 if not spend_file or not sales_file:
     st.info(
-        "Upload **Print Spend CSV** and **Sales CSV** in the sidebar to begin.\n\n"
+        "Upload **Print Spend CSV** and **Sales Funnel CSV** in the sidebar to begin.\n\n"
         "Required columns:\n"
         "- **Print Spend**: date, region, product, edition, publication, size, position, spend_in_inr\n"
-        "- **Sales**: date, region, product, Units Sold"
+        "- **Sales Funnel**: date, region, product, and at least one of "
+        "`enquiries` / `dealer_visits` / `sales` (selectable as the outcome metric)"
     )
     st.stop()
 
-if st.button("▶  Run Causal Analysis", type="primary"):
+if st.button("▶  Run Optimization Analysis", type="primary"):
     from src.analysis.causal.print_sales.causal_model import run_print_causal_analysis
     from src.analysis.causal.print_sales.data_processor import DataValidationError
 
@@ -226,16 +254,17 @@ if st.button("▶  Run Causal Analysis", type="primary"):
         date_range_arg = (str(date_start), str(date_end)) if date_start and date_end else None
         regions_arg = region_filter if region_filter else None
 
-        with st.spinner("Running causal model… this may take a minute."):
+        with st.spinner(f"Running model on {outcome_label}… this may take a minute."):
             result = run_print_causal_analysis(
                 print_spend=print_spend_df,
                 sales=sales_df,
                 max_lag=max_lag,
                 regions=regions_arg,
                 date_range=date_range_arg,
+                outcome_col=outcome_col,
             )
         st.session_state["print_causal_result"] = result
-        st.success("Analysis complete.")
+        st.success(f"Analysis complete on {outcome_label}.")
 
     except DataValidationError as exc:
         st.error(f"Data validation failed: {exc}")
@@ -247,8 +276,10 @@ if st.button("▶  Run Causal Analysis", type="primary"):
 # ── Results ───────────────────────────────────────────────────────────────────
 result = st.session_state.get("print_causal_result")
 if result is None:
-    st.info("Configure your inputs and click **Run Causal Analysis** to see results.")
+    st.info("Configure your inputs and click **Run Optimization Analysis** to see results.")
     st.stop()
+
+_outcome_unit = _OUTCOME_UNIT_LABEL.get(result.outcome, result.outcome)
 
 from src.components.causal_charts import plot_ate_by_region, plot_decay_sweep
 
@@ -262,7 +293,7 @@ with col1:
     st.markdown(
         f"""
         <div class="metric-card">
-            <div class="metric-label">ATE (units per ₹10,00,000 spend)</div>
+            <div class="metric-label">ATE ({_outcome_unit} per ₹10,00,000 spend)</div>
             <div class="metric-value">{ate_per_m:+.3f}</div>
         </div>
         """,
@@ -323,8 +354,8 @@ with scol2:
     st.markdown(
         f"""
         <div class="metric-card">
-            <div class="metric-label">Total Incremental Sales Units (ATE × Total Spend)</div>
-            <div class="metric-value">{total_impact_units:+,.0f} units</div>
+            <div class="metric-label">Total Incremental {_outcome_unit.title()} (ATE × Total Spend)</div>
+            <div class="metric-value">{total_impact_units:+,.0f}</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -363,8 +394,77 @@ with tab_size:
 with tab_position:
     _display_breakdown_tab(result.position_breakdown, "Position")
 
+# Row 4.5 — Recommendations for next print buys
+st.markdown("### Next-Buy Recommendations")
+recs = getattr(result, "recommendations", {}) or {}
+if not recs:
+    st.info("No recommendations available — run the analysis to generate.")
+else:
+    p_thr = recs.get("p_threshold", 0.10)
+    st.caption(
+        f"Cuts where the estimated incremental {_outcome_unit} per ₹ of Print spend is "
+        f"credibly positive (p < {p_thr:.2f}). Use this to prioritise the next "
+        f"buying cycle. ATE values shown per ₹10,00,000 of spend."
+    )
+
+    rec_cols = ["dimension", "group", "ate_per_10L", "p_value", "n_obs", "total_spend_inr"]
+    rec_rename = {
+        "dimension": "Dimension",
+        "group": "Group",
+        "ate_per_10L": f"ATE ({_outcome_unit} / ₹10L)",
+        "p_value": "p-value",
+        "n_obs": "Observations",
+        "total_spend_inr": "Spend in window (₹)",
+    }
+
+    scale_up = recs.get("combined_scale_up", pd.DataFrame())
+    avoid = recs.get("combined_avoid", pd.DataFrame())
+
+    rec_tab_scale, rec_tab_avoid, rec_tab_per_dim = st.tabs(
+        ["⬆ Scale Up", "⬇ Deprioritise", "Per Dimension"]
+    )
+
+    with rec_tab_scale:
+        if scale_up.empty:
+            st.info("No statistically credible positive cuts at the current p-threshold.")
+        else:
+            display = scale_up[[c for c in rec_cols if c in scale_up.columns]].rename(
+                columns=rec_rename
+            )
+            st.dataframe(display, use_container_width=True, hide_index=True)
+
+    with rec_tab_avoid:
+        if avoid.empty:
+            st.info("No statistically credible negative cuts — nothing to deprioritise.")
+        else:
+            display = avoid[[c for c in rec_cols if c in avoid.columns]].rename(
+                columns=rec_rename
+            )
+            st.dataframe(display, use_container_width=True, hide_index=True)
+
+    with rec_tab_per_dim:
+        from src.components.causal_charts import plot_recommendation_column_chart
+
+        per_dim = recs.get("per_dimension", {})
+        any_shown = False
+        for dim_label, df in per_dim.items():
+            if df is None or df.empty:
+                continue
+            any_shown = True
+            st.markdown(f"**{dim_label}**")
+            st.plotly_chart(
+                plot_recommendation_column_chart(df, dim_label),
+                use_container_width=True,
+                key=f"rec_chart_{dim_label.lower().replace(' ', '_')}",
+            )
+            display = df[[c for c in rec_cols if c in df.columns]].rename(columns=rec_rename)
+            st.dataframe(display, use_container_width=True, hide_index=True)
+            st.markdown("---")
+        if not any_shown:
+            st.info("No dimension-level recommendations available.")
+
 # Row 5 — Assumptions & warnings
-with st.expander("Causal Assumptions & Warnings", expanded=False):
+with st.expander("Modelling Assumptions & Warnings", expanded=False):
     st.markdown("**Stated Assumptions**")
     for i, assumption in enumerate(result.assumptions, 1):
         st.markdown(f"{i}. {assumption}")
@@ -395,6 +495,6 @@ st.markdown("### Download Results")
 st.download_button(
     label="⬇  Download Results (Excel)",
     data=_to_excel(result),
-    file_name="print_causal_results.xlsx",
+    file_name="print_optimization_results.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 )

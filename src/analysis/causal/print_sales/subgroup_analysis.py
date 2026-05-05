@@ -10,8 +10,11 @@ from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-_BREAKDOWN_COLS: list[str] = ["group", "ate", "ate_lower", "ate_upper", "p_value", "n_obs"]
+_BREAKDOWN_COLS: list[str] = [
+    "group", "ate", "ate_lower", "ate_upper", "p_value", "n_obs", "total_spend_inr"
+]
 _MIN_OBS: int = 30
+_DEFAULT_OUTCOME_COL: str = "enquiries"
 
 
 def _adstock_col(decay: float) -> str:
@@ -51,6 +54,7 @@ def _build_subgroup_panel(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame | None:
     """Build a sub-group panel filtered to a single dimension value.
 
@@ -95,8 +99,8 @@ def _build_subgroup_panel(
     panel["product_id"] = LabelEncoder().fit_transform(panel["product"])
 
     panel = panel.sort_values(["region", "product", "date"])
-    panel["lagged_sales_1d"] = panel.groupby(["region", "product"])["sales_units"].shift(1)
-    panel = panel.dropna(subset=["lagged_sales_1d"])
+    panel["lagged_outcome_1d"] = panel.groupby(["region", "product"])[outcome_col].shift(1)
+    panel = panel.dropna(subset=["lagged_outcome_1d"])
 
     if len(panel) < _MIN_OBS:
         logger.warning(
@@ -114,6 +118,7 @@ def _run_dimension_breakdown(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
     """Run OLS for each unique value of a print dimension.
 
@@ -124,22 +129,28 @@ def _run_dimension_breakdown(
         best_decay: Best-fit adstock θ.
         confounder_cols: Confounder column names.
         max_lag: Max adstock carry-over days.
+        outcome_col: Outcome column to model.
 
     Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
+        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value,
+        n_obs, total_spend_inr.
     """
     treatment_col = _adstock_col(best_decay)
     rows = []
     for value in sorted(print_spend[dimension].unique()):
         panel = _build_subgroup_panel(
-            print_spend, sales, dimension, value, best_decay, confounder_cols, max_lag
+            print_spend, sales, dimension, value, best_decay, confounder_cols,
+            max_lag, outcome_col,
         )
         if panel is None:
             continue
-        fit = _fit_ols_single(panel, treatment_col, "sales_units", confounder_cols)
+        fit = _fit_ols_single(panel, treatment_col, outcome_col, confounder_cols)
         if fit is None:
             continue
         ate, ate_lower, ate_upper, p_value = fit
+        spend_total = float(
+            print_spend.loc[print_spend[dimension] == value, "spend_in_inr"].sum()
+        )
         rows.append({
             "group": value,
             "ate": ate,
@@ -147,6 +158,7 @@ def _run_dimension_breakdown(
             "ate_upper": ate_upper,
             "p_value": p_value,
             "n_obs": len(panel),
+            "total_spend_inr": spend_total,
         })
         logger.info("%s=%s  ATE=%.4f  p=%.4f  n=%d", dimension, value, ate, p_value, len(panel))
 
@@ -160,6 +172,7 @@ def run_region_breakdown(
     panel: pd.DataFrame,
     best_decay: float,
     confounder_cols: list[str],
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
     """Estimate ATE per region by filtering the primary panel.
 
@@ -167,9 +180,11 @@ def run_region_breakdown(
         panel: Full analytical panel with all adstock columns.
         best_decay: Best-fit adstock θ.
         confounder_cols: Confounder column names.
+        outcome_col: Outcome column to model.
 
     Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
+        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value,
+        n_obs, total_spend_inr.
     """
     treatment_col = _adstock_col(best_decay)
     rows = []
@@ -178,7 +193,7 @@ def run_region_breakdown(
         if len(sub) < _MIN_OBS:
             logger.warning("Region %s has only %d rows — skipping", region, len(sub))
             continue
-        fit = _fit_ols_single(sub, treatment_col, "sales_units", confounder_cols)
+        fit = _fit_ols_single(sub, treatment_col, outcome_col, confounder_cols)
         if fit is None:
             continue
         ate, ate_lower, ate_upper, p_value = fit
@@ -189,6 +204,7 @@ def run_region_breakdown(
             "ate_upper": ate_upper,
             "p_value": p_value,
             "n_obs": len(sub),
+            "total_spend_inr": float(sub["total_spend_inr"].sum()),
         })
         logger.info("Region=%s  ATE=%.4f  p=%.4f  n=%d", region, ate, p_value, len(sub))
 
@@ -204,22 +220,12 @@ def run_edition_breakdown(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int = 7,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per edition.
-
-    Args:
-        print_spend: Validated insertion-level spend DataFrame.
-        sales: Validated sales DataFrame.
-        best_decay: Best-fit adstock θ.
-        confounder_cols: Confounder column names.
-        max_lag: Max adstock carry-over days. Default 7.
-
-    Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
-    """
+    """Estimate ATE per edition."""
     logger.info("Running edition breakdown...")
     return _run_dimension_breakdown(
-        print_spend, sales, "edition", best_decay, confounder_cols, max_lag
+        print_spend, sales, "edition", best_decay, confounder_cols, max_lag, outcome_col
     )
 
 
@@ -229,22 +235,12 @@ def run_size_breakdown(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int = 7,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per ad size (full_page, half_page, etc.).
-
-    Args:
-        print_spend: Validated insertion-level spend DataFrame.
-        sales: Validated sales DataFrame.
-        best_decay: Best-fit adstock θ.
-        confounder_cols: Confounder column names.
-        max_lag: Max adstock carry-over days. Default 7.
-
-    Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
-    """
+    """Estimate ATE per ad size (full_page, half_page, etc.)."""
     logger.info("Running size breakdown...")
     return _run_dimension_breakdown(
-        print_spend, sales, "size", best_decay, confounder_cols, max_lag
+        print_spend, sales, "size", best_decay, confounder_cols, max_lag, outcome_col
     )
 
 
@@ -254,22 +250,12 @@ def run_position_breakdown(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int = 7,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per placement position (front_page, back_page, etc.).
-
-    Args:
-        print_spend: Validated insertion-level spend DataFrame.
-        sales: Validated sales DataFrame.
-        best_decay: Best-fit adstock θ.
-        confounder_cols: Confounder column names.
-        max_lag: Max adstock carry-over days. Default 7.
-
-    Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
-    """
+    """Estimate ATE per placement position (front_page, back_page, etc.)."""
     logger.info("Running position breakdown...")
     return _run_dimension_breakdown(
-        print_spend, sales, "position", best_decay, confounder_cols, max_lag
+        print_spend, sales, "position", best_decay, confounder_cols, max_lag, outcome_col
     )
 
 
@@ -279,22 +265,12 @@ def run_publication_breakdown(
     best_decay: float,
     confounder_cols: list[str],
     max_lag: int = 7,
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per publication.
-
-    Args:
-        print_spend: Validated insertion-level spend DataFrame.
-        sales: Validated sales DataFrame.
-        best_decay: Best-fit adstock θ.
-        confounder_cols: Confounder column names.
-        max_lag: Max adstock carry-over days. Default 7.
-
-    Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
-    """
+    """Estimate ATE per publication."""
     logger.info("Running publication breakdown...")
     return _run_dimension_breakdown(
-        print_spend, sales, "publication", best_decay, confounder_cols, max_lag
+        print_spend, sales, "publication", best_decay, confounder_cols, max_lag, outcome_col
     )
 
 
@@ -302,6 +278,7 @@ def run_product_breakdown(
     panel: pd.DataFrame,
     best_decay: float,
     confounder_cols: list[str],
+    outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
     """Estimate ATE per product by filtering the primary panel.
 
@@ -312,9 +289,11 @@ def run_product_breakdown(
         panel: Full analytical panel (date × region × product).
         best_decay: Best-fit adstock θ.
         confounder_cols: Confounder column names.
+        outcome_col: Outcome column to model.
 
     Returns:
-        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value, n_obs.
+        DataFrame with columns: group, ate, ate_lower, ate_upper, p_value,
+        n_obs, total_spend_inr.
     """
     treatment_col = _adstock_col(best_decay)
     rows = []
@@ -325,7 +304,7 @@ def run_product_breakdown(
             continue
         # product_id is constant within a product slice — exclude to avoid collinearity
         available_confounders = [c for c in confounder_cols if c != "product_id" and c in sub.columns]
-        fit = _fit_ols_single(sub, treatment_col, "sales_units", available_confounders)
+        fit = _fit_ols_single(sub, treatment_col, outcome_col, available_confounders)
         if fit is None:
             continue
         ate, ate_lower, ate_upper, p_value = fit
@@ -336,6 +315,7 @@ def run_product_breakdown(
             "ate_upper": ate_upper,
             "p_value": p_value,
             "n_obs": len(sub),
+            "total_spend_inr": float(sub["total_spend_inr"].sum()),
         })
         logger.info("Product=%s  ATE=%.4f  p=%.4f  n=%d", product, ate, p_value, len(sub))
 

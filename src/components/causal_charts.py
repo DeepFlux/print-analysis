@@ -126,6 +126,56 @@ def plot_ate_by_region(region_breakdown: pd.DataFrame) -> go.Figure:
     return fig
 
 
+def plot_recommendation_column_chart(
+    rec_df: pd.DataFrame,
+    dimension_label: str,
+) -> go.Figure:
+    """Vertical column chart of ATE per cut for one dimension's recommendations.
+
+    Args:
+        rec_df: Per-dimension recommendations DataFrame with columns:
+            group, ate_per_10L, p_value, n_obs, total_spend_inr.
+            ``ate_per_10L`` is already pre-scaled (units per ₹10,00,000).
+        dimension_label: Human-readable dimension name (e.g. "Publication").
+
+    Returns:
+        Plotly Figure with vertical bars sorted by ATE descending.
+    """
+    df = rec_df.copy().sort_values("ate_per_10L", ascending=False)
+
+    fig = go.Figure(
+        go.Bar(
+            x=df["group"],
+            y=df["ate_per_10L"],
+            marker_color=HAVAS_RED,
+            customdata=df[["p_value", "n_obs", "total_spend_inr"]].to_numpy(),
+            hovertemplate=(
+                "<b>%{x}</b><br>"
+                "ATE per ₹10L: %{y:,.3f}<br>"
+                "p-value: %{customdata[0]:.3f}<br>"
+                "Observations: %{customdata[1]:,}<br>"
+                "Spend in window: ₹%{customdata[2]:,.0f}"
+                "<extra></extra>"
+            ),
+        )
+    )
+    fig.update_layout(
+        title={"text": f"ATE by {dimension_label}", "font": {"color": HAVAS_DARK}},
+        xaxis={
+            "title": dimension_label,
+            "tickangle": -35,
+            "automargin": True,
+        },
+        yaxis={"title": _ATE_AXIS_LABEL, "gridcolor": "#E8E8E8", "zerolinecolor": HAVAS_DARK},
+        plot_bgcolor="#FFFFFF",
+        paper_bgcolor="#FFFFFF",
+        font={"color": HAVAS_DARK},
+        height=max(320, 40 + 28 * len(df)),
+        margin={"l": 60, "r": 30, "t": 60, "b": 80},
+    )
+    return fig
+
+
 def plot_subgroup_breakdown(breakdown_df: pd.DataFrame, dimension_label: str) -> go.Figure:
     """Horizontal bar chart for a dimension sub-group breakdown with CI error bars.
 

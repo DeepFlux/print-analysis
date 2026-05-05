@@ -49,3 +49,4 @@ class PrintCausalResult(CausalResult):
     n_observations: int = 0
     regions_analysed: list[str] = field(default_factory=list)
     assumptions: list[str] = field(default_factory=list)
+    recommendations: dict = field(default_factory=dict)

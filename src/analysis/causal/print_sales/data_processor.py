@@ -11,7 +11,10 @@ logger = get_logger(__name__)
 PRINT_SPEND_REQUIRED_COLS: list[str] = [
     "date", "region", "edition", "publication", "size", "position", "spend_in_inr"
 ]
-SALES_REQUIRED_COLS: list[str] = ["date", "region", "product", "Units Sold"]
+SALES_REQUIRED_COLS: list[str] = ["date", "region", "product"]
+
+OUTCOME_COL_OPTIONS: list[str] = ["enquiries", "dealer_visits", "sales"]
+DEFAULT_OUTCOME_COL: str = "enquiries"
 
 VALID_SIZES: set[str] = {"full_page", "half_page", "quarter_page", "strip"}
 VALID_POSITIONS: set[str] = {
@@ -84,23 +87,40 @@ def validate_print_spend(df: pd.DataFrame) -> pd.DataFrame:
     return result
 
 
-def validate_sales(df: pd.DataFrame) -> pd.DataFrame:
-    """Validate and coerce the sales DataFrame.
+def validate_sales(df: pd.DataFrame, outcome_col: str = DEFAULT_OUTCOME_COL) -> pd.DataFrame:
+    """Validate and coerce the sales-funnel DataFrame.
+
+    Accepts the funnel file containing date, region, product and any of
+    enquiries / dealer_visits / sales. The chosen ``outcome_col`` must be
+    present and numeric.
 
     Args:
-        df: Raw daily regional sales data.
+        df: Raw daily regional funnel data.
+        outcome_col: Outcome column to validate against. One of
+            OUTCOME_COL_OPTIONS. Defaults to enquiries.
 
     Returns:
-        Validated copy with ``date`` cast to datetime.
+        Validated copy with ``date`` cast to datetime and ``outcome_col``
+        coerced to numeric.
 
     Raises:
         DataValidationError: If any validation check fails.
     """
+    if outcome_col not in OUTCOME_COL_OPTIONS:
+        raise DataValidationError(
+            f"outcome_col must be one of {OUTCOME_COL_OPTIONS}, got: {outcome_col!r}"
+        )
+
     result = df.copy()
     missing = set(SALES_REQUIRED_COLS) - set(result.columns)
     if missing:
         raise DataValidationError(
             f"sales is missing required columns: {sorted(missing)}"
+        )
+    if outcome_col not in result.columns:
+        raise DataValidationError(
+            f"sales is missing the selected outcome column {outcome_col!r}. "
+            f"Available columns: {sorted(result.columns)}"
         )
 
     for col in ["date", "region", "product"]:
@@ -115,15 +135,20 @@ def validate_sales(df: pd.DataFrame) -> pd.DataFrame:
     except Exception as exc:
         raise DataValidationError(f"sales.date could not be parsed as datetime: {exc}") from exc
 
-    result = result.rename(columns={"Units Sold": "sales_units"})
-    result["sales_units"] = pd.to_numeric(result["sales_units"], errors="coerce")
-    if result["sales_units"].isna().any():
+    if not pd.api.types.is_numeric_dtype(result[outcome_col]):
+        result[outcome_col] = (
+            result[outcome_col].astype(str).str.replace(",", "", regex=False).str.strip()
+        )
+    result[outcome_col] = pd.to_numeric(result[outcome_col], errors="coerce")
+    if result[outcome_col].isna().any():
         raise DataValidationError(
-            "sales.'Units Sold' contains non-numeric or null values — must be a numeric unit count"
+            f"sales.{outcome_col!r} contains non-numeric or null values — must be a numeric count"
         )
 
-    logger.info("sales validated: %d rows, date range %s to %s",
-                len(result), result["date"].min().date(), result["date"].max().date())
+    logger.info(
+        "sales validated: %d rows, outcome=%s, date range %s to %s",
+        len(result), outcome_col, result["date"].min().date(), result["date"].max().date(),
+    )
     return result
 
 
@@ -160,6 +185,7 @@ def build_analytical_panel(
     sales: pd.DataFrame,
     decay_values: list[float] = DECAY_VALUES,
     max_lag: int = 7,
+    outcome_col: str = DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
     """Build the balanced analytical panel for causal modelling.
 
@@ -220,13 +246,13 @@ def build_analytical_panel(
     panel["product_id"] = LabelEncoder().fit_transform(panel["product"])
 
     panel = panel.sort_values(["region", "product", "date"]).reset_index(drop=True)
-    panel["lagged_sales_1d"] = panel.groupby(["region", "product"])["sales_units"].shift(1)
+    panel["lagged_outcome_1d"] = panel.groupby(["region", "product"])[outcome_col].shift(1)
 
     rows_before = len(panel)
-    panel = panel.dropna(subset=["lagged_sales_1d"])
+    panel = panel.dropna(subset=["lagged_outcome_1d"])
     dropped = rows_before - len(panel)
     if dropped:
-        logger.info("Dropped %d rows with null lagged_sales_1d (first day per region)", dropped)
+        logger.info("Dropped %d rows with null lagged_outcome_1d (first day per region)", dropped)
 
     panel = build_adstock_columns(panel, "total_spend_inr", decay_values, max_lag)
     logger.info("Panel built: %d rows, %d columns", len(panel), len(panel.columns))

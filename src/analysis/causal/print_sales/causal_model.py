@@ -13,13 +13,13 @@ from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-OUTCOME_COL: str = "sales_units"
+DEFAULT_OUTCOME_COL: str = "enquiries"
 CONFOUNDER_COLS: list[str] = [
     "day_of_week",
     "week_of_year",
     "region_id",
     "product_id",
-    "lagged_sales_1d",
+    "lagged_outcome_1d",
 ]
 
 ASSUMPTIONS: list[str] = [
@@ -233,7 +233,7 @@ def _run_refutations(
 
 def run_decay_sweep(
     panel: pd.DataFrame,
-    outcome_col: str = OUTCOME_COL,
+    outcome_col: str = DEFAULT_OUTCOME_COL,
     confounder_cols: list[str] = CONFOUNDER_COLS,
     decay_values: list[float] = DECAY_VALUES,
 ) -> pd.DataFrame:
@@ -286,23 +286,37 @@ def select_best_decay(decay_sweep: pd.DataFrame) -> float:
     return float(best["theta"])
 
 
+_OUTCOME_LABELS: dict[str, str] = {
+    "enquiries": "enquiries (leads)",
+    "dealer_visits": "dealer visits",
+    "sales": "sales units",
+}
+
+
+def _outcome_label(outcome_col: str) -> str:
+    """Return a human-readable label for the outcome column."""
+    return _OUTCOME_LABELS.get(outcome_col, outcome_col)
+
+
 def build_interpretation(
     ate: float,
     p_value: float,
     best_decay: float,
     ate_pct_impact: float,
     refutation_passed: bool,
-    mean_sales: float,
+    mean_outcome: float,
+    outcome_col: str = DEFAULT_OUTCOME_COL,
 ) -> str:
     """Generate a plain-English summary paragraph of the causal result.
 
     Args:
-        ate: Average Treatment Effect (sales units per ₹1 spend).
+        ate: Average Treatment Effect (outcome units per ₹1 spend).
         p_value: P-value for the ATE.
         best_decay: Best-fit adstock decay θ.
-        ate_pct_impact: ATE as % of mean baseline sales.
+        ate_pct_impact: ATE as % of mean baseline outcome.
         refutation_passed: Whether all refutation tests passed.
-        mean_sales: Mean daily sales units (for context).
+        mean_outcome: Mean daily outcome value (for context).
+        outcome_col: Outcome column being analysed (e.g. "enquiries").
 
     Returns:
         Plain-English interpretation string.
@@ -323,9 +337,10 @@ def build_interpretation(
         if refutation_passed
         else "WARNING: One or more causal robustness checks failed — interpret with caution."
     )
+    label = _outcome_label(outcome_col)
     return (
         f"A ₹10,00,000 increase in daily Print spend is associated with a causal {direction} of "
-        f"{abs(ate * 1_000_000):.3f} sales units (mean daily sales: {mean_sales:.1f} units, "
+        f"{abs(ate * 1_000_000):.3f} {label} (mean daily {label}: {mean_outcome:.1f}, "
         f"impact: {ate_pct_impact:.2f}%). This effect is {significance}. "
         f"The best-fit adstock carry-over decay is θ={best_decay:.1f}. {refutation_note}"
     )
@@ -337,6 +352,7 @@ def run_print_causal_analysis(
     max_lag: int = 7,
     regions: list[str] | None = None,
     date_range: tuple[str, str] | None = None,
+    outcome_col: str = DEFAULT_OUTCOME_COL,
 ) -> PrintCausalResult:
     """Top-level entry point for the Print Spend → Sales causal analysis.
 
@@ -381,7 +397,7 @@ def run_print_causal_analysis(
     warnings_list: list[str] = []
 
     print_spend = validate_print_spend(print_spend)
-    sales = validate_sales(sales)
+    sales = validate_sales(sales, outcome_col=outcome_col)
 
     if regions:
         print_spend = print_spend[print_spend["region"].isin(regions)].copy()
@@ -399,7 +415,9 @@ def run_print_causal_analysis(
         logger.info("Filtered to date range %s – %s", date_range[0], date_range[1])
 
     daily_spend = aggregate_daily_spend(print_spend)
-    panel = build_analytical_panel(daily_spend, sales, DECAY_VALUES, max_lag)
+    panel = build_analytical_panel(
+        daily_spend, sales, DECAY_VALUES, max_lag, outcome_col=outcome_col
+    )
 
     if panel["total_spend_inr"].sum() == 0:
         warnings_list.append(
@@ -408,18 +426,18 @@ def run_print_causal_analysis(
         logger.warning("All spend is zero — ATE will be trivially 0")
 
     logger.info("Running decay sweep across %d θ values...", len(DECAY_VALUES))
-    decay_sweep = run_decay_sweep(panel, OUTCOME_COL, CONFOUNDER_COLS, DECAY_VALUES)
+    decay_sweep = run_decay_sweep(panel, outcome_col, CONFOUNDER_COLS, DECAY_VALUES)
 
     best_theta = select_best_decay(decay_sweep)
     best_treatment_col = _adstock_col(best_theta)
 
     ate, ate_lower, ate_upper, p_value, _ = _fit_ols(
-        panel, best_treatment_col, OUTCOME_COL, CONFOUNDER_COLS
+        panel, best_treatment_col, outcome_col, CONFOUNDER_COLS
     )
 
     logger.info("Fitting DoWhy model for best θ=%.1f...", best_theta)
     causal_model, identified_estimand, causal_estimate = _build_dowhy_model(
-        panel, best_treatment_col, OUTCOME_COL, CONFOUNDER_COLS
+        panel, best_treatment_col, outcome_col, CONFOUNDER_COLS
     )
 
     logger.info("Running refutation tests...")
@@ -427,28 +445,28 @@ def run_print_causal_analysis(
         causal_model, identified_estimand, causal_estimate, ate
     )
 
-    mean_sales = float(panel[OUTCOME_COL].mean())
-    ate_pct_impact = (ate / mean_sales * 100) if mean_sales != 0 else 0.0
+    mean_outcome = float(panel[outcome_col].mean())
+    ate_pct_impact = (ate / mean_outcome * 100) if mean_outcome != 0 else 0.0
 
     interpretation = build_interpretation(
-        ate, p_value, best_theta, ate_pct_impact, refutation_passed, mean_sales
+        ate, p_value, best_theta, ate_pct_impact, refutation_passed, mean_outcome, outcome_col
     )
 
     logger.info("Running sub-group breakdowns...")
-    region_breakdown = run_region_breakdown(panel, best_theta, CONFOUNDER_COLS)
+    region_breakdown = run_region_breakdown(panel, best_theta, CONFOUNDER_COLS, outcome_col)
     edition_breakdown = run_edition_breakdown(
-        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag
+        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag, outcome_col
     )
     size_breakdown = run_size_breakdown(
-        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag
+        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag, outcome_col
     )
     position_breakdown = run_position_breakdown(
-        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag
+        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag, outcome_col
     )
     publication_breakdown = run_publication_breakdown(
-        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag
+        print_spend, sales, best_theta, CONFOUNDER_COLS, max_lag, outcome_col
     )
-    product_breakdown = run_product_breakdown(panel, best_theta, CONFOUNDER_COLS)
+    product_breakdown = run_product_breakdown(panel, best_theta, CONFOUNDER_COLS, outcome_col)
 
     total_spend_inr = float(panel["total_spend_inr"].sum())
 
@@ -464,9 +482,20 @@ def run_print_causal_analysis(
             "Interpret the causal estimate with caution."
         )
 
+    from src.analysis.causal.print_sales.recommendations import build_recommendations
+
+    recommendations = build_recommendations(
+        publication_breakdown=publication_breakdown,
+        size_breakdown=size_breakdown,
+        position_breakdown=position_breakdown,
+        edition_breakdown=edition_breakdown,
+        region_breakdown=region_breakdown,
+        product_breakdown=product_breakdown,
+    )
+
     return PrintCausalResult(
         treatment=best_treatment_col,
-        outcome=OUTCOME_COL,
+        outcome=outcome_col,
         ate=ate,
         ate_lower=ate_lower,
         ate_upper=ate_upper,
@@ -490,4 +519,5 @@ def run_print_causal_analysis(
         n_observations=len(panel),
         regions_analysed=regions_analysed,
         assumptions=ASSUMPTIONS,
+        recommendations=recommendations,
     )
