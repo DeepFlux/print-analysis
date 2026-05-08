@@ -8,7 +8,7 @@
 
 ## 1. Problem Statement
 
-We want to estimate the **Average Treatment Effect (ATE)** of Print media spend on daily regional sales.
+We want to estimate the **Average Treatment Effect (Incremental Sales)** of Print media spend on daily regional sales.
 
 Print spend is described by four dimensions:
 - **Region** — geographic area of the edition
@@ -142,7 +142,7 @@ No unobserved confounders assumed (stated assumption — must be surfaced to use
 
 ### 5c. Adstock Decay Selection
 Run the causal model for **each decay value θ**. Select best θ by:
-1. Highest ATE statistical significance (lowest p-value)
+1. Highest Incremental Sales statistical significance (lowest p-value)
 2. As a tiebreaker: highest model R² on the outcome regression
 
 Report the full decay sweep as a chart so the analyst can see the sensitivity.
@@ -152,17 +152,17 @@ For the best-fit θ, run all three:
 
 | Test | What it checks |
 |---|---|
-| Placebo treatment | Replace real spend with random noise → ATE should collapse to ~0 |
-| Random common cause | Add a random confounder → ATE should be stable |
-| Data subset refuter | Estimate on 80% random subset → ATE should be similar |
+| Placebo treatment | Replace real spend with random noise → Incremental Sales should collapse to ~0 |
+| Random common cause | Add a random confounder → Incremental Sales should be stable |
+| Data subset refuter | Estimate on 80% random subset → Incremental Sales should be similar |
 
-Flag `refutation_passed = False` if any test materially changes the ATE (>20% change or flips sign).
+Flag `refutation_passed = False` if any test materially changes the Incremental Sales (>20% change or flips sign).
 
 ---
 
 ## 6. Sub-Group Analysis (Dimension Breakdown)
 
-After the primary ATE, run secondary analyses:
+After the primary Incremental Sales, run secondary analyses:
 
 | Dimension | Question |
 |---|---|
@@ -185,7 +185,7 @@ class PrintCausalResult:
     ate: float                        # Average Treatment Effect (sales units per £1 spend)
     ate_lower: float                  # 95% CI lower bound
     ate_upper: float                  # 95% CI upper bound
-    ate_pct_impact: float             # ATE as % of mean baseline sales
+    ate_pct_impact: float             # Incremental Sales as % of mean baseline sales
     p_value: float
     best_decay_theta: float           # Winning adstock decay rate
     method: str                       # "DoWhy-LinearRegression"
@@ -193,10 +193,10 @@ class PrintCausalResult:
     refutation_details: dict          # Per-test results
 
     # Decay sweep
-    decay_sweep: pd.DataFrame         # theta, ATE, p_value, r_squared per decay
+    decay_sweep: pd.DataFrame         # theta, Incremental Sales, p_value, r_squared per decay
 
     # Sub-group breakdowns
-    region_breakdown: pd.DataFrame    # region, ATE, CI, p_value, n_days
+    region_breakdown: pd.DataFrame    # region, Incremental Sales, CI, p_value, n_days
     edition_breakdown: pd.DataFrame
     size_breakdown: pd.DataFrame
     position_breakdown: pd.DataFrame
@@ -220,17 +220,17 @@ class PrintCausalResult:
 
 [Main area]
   Row 1: 4 metric cards
-    ├── ATE (sales units per £1000 spend)
+    ├── Incremental Sales (sales units per £1000 spend)
     ├── Best Adstock Decay (θ)
     ├── Statistical Significance (p-value badge: green <0.05, amber <0.1, red ≥0.1)
     └── Refutation Status (PASS / FAIL badge)
 
-  Row 2: [Adstock Decay Sweep Chart]  |  [ATE by Region Bar Chart]
-    (line chart: x=θ, y=ATE with CI bands)    (horizontal bar, sorted by ATE)
+  Row 2: [Adstock Decay Sweep Chart]  |  [Incremental Sales by Region Bar Chart]
+    (line chart: x=θ, y=Incremental Sales with CI bands)    (horizontal bar, sorted by Incremental Sales)
 
   Row 3: [Sub-group Breakdown Tabs]
     Tabs: Region | Edition | Size | Position
-    Each tab: sortable table (ATE, CI lower, CI upper, p-value, n_obs)
+    Each tab: sortable table (Incremental Sales, CI lower, CI upper, p-value, n_obs)
               + small bar chart of ATEs
 
   Row 4: [Causal Assumptions & Warnings]
@@ -243,7 +243,7 @@ class PrintCausalResult:
 
 ### Havas Theme Application
 - Page header: dark bar (`#1A1A1A`) with white text and Havas Red left border
-- Metric cards: white background, Havas Red value text for primary ATE card
+- Metric cards: white background, Havas Red value text for primary Incremental Sales card
 - Charts: Havas Red (`#CC0000`) primary series, dark grey secondary
 - PASS badge: green background; FAIL badge: red (`#CC0000`) background
 - Tabs: active tab underline in Havas Red
@@ -280,10 +280,10 @@ tests/
 | `test_adstock_zero_decay` | decay=0.0 | adstock equals raw spend |
 | `test_adstock_full_decay` | decay=1.0 | cumulative sum of spend |
 | `test_adstock_max_lag` | 10-day series, max_lag=7 | No carry-over beyond day 7 |
-| `test_ate_zero_spend` | All spend = 0 | ATE = 0, warning raised |
+| `test_ate_zero_spend` | All spend = 0 | Incremental Sales = 0, warning raised |
 | `test_panel_build_region_mismatch` | Regions in spend ≠ regions in sales | `DataValidationError` raised |
 | `test_decay_sweep_returns_all_thetas` | Normal input | 10 rows in decay_sweep df |
-| `test_refutation_placebo` | Synthetic data with known ATE=0 | refutation_passed = True |
+| `test_refutation_placebo` | Synthetic data with known Incremental Sales=0 | refutation_passed = True |
 | `test_subgroup_region_coverage` | 3-region input | 3 rows in region_breakdown |
 
 ---

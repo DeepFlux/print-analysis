@@ -11,7 +11,7 @@ class CausalResult:
         ate: Average Treatment Effect (point estimate).
         ate_lower: 95% CI lower bound.
         ate_upper: 95% CI upper bound.
-        p_value: P-value for the ATE estimate.
+        p_value: P-value for the Incremental Sales estimate.
         method: Estimation method used (e.g. "DoWhy-LinearRegression").
         refutation_passed: True if all mandatory refutation tests passed.
         interpretation: Plain-English summary of the result.

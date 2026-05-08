@@ -46,7 +46,7 @@ def _fit_ols(
     outcome_col: str,
     confounder_cols: list[str],
 ) -> tuple[float, float, float, float, float]:
-    """Fit OLS regression and return ATE statistics.
+    """Fit OLS regression and return Incremental Sales statistics.
 
     Args:
         panel: Panel DataFrame containing treatment, outcome, and confounders.
@@ -127,7 +127,7 @@ def _run_refutations(
         causal_model: Fitted DoWhy CausalModel.
         identified_estimand: DoWhy identified estimand.
         causal_estimate: DoWhy causal estimate.
-        original_ate: The ATE from the primary model.
+        original_ate: The Incremental Sales from the primary model.
 
     Returns:
         Tuple of (refutation_passed, details_dict).
@@ -135,9 +135,9 @@ def _run_refutations(
     details: dict = {}
     all_passed = True
     abs_ate = abs(original_ate) if original_ate != 0.0 else 1e-9
-    # Absolute floor: if the original ATE is already negligibly small, the placebo
+    # Absolute floor: if the original Incremental Sales is already negligibly small, the placebo
     # check uses absolute magnitude rather than ratio (ratio is undefined near zero).
-    _ATE_ABS_FLOOR = abs_ate * 10  # "near zero" = placebo must stay within 10x a tiny ATE
+    _ATE_ABS_FLOOR = abs_ate * 10  # "near zero" = placebo must stay within 10x a tiny Incremental Sales
 
     logger.info("Running placebo treatment refuter...")
     with warnings.catch_warnings():
@@ -152,7 +152,7 @@ def _run_refutations(
     placebo_ate = float(placebo.new_effect)
     placebo_ratio = abs(placebo_ate) / abs_ate
     if abs_ate < 1e-3:
-        # Original ATE is negligibly small — both values are near zero, so placebo passes
+        # Original Incremental Sales is negligibly small — both values are near zero, so placebo passes
         placebo_passed = True
     else:
         placebo_passed = placebo_ratio < _PLACEBO_COLLAPSE_THRESHOLD
@@ -161,7 +161,7 @@ def _run_refutations(
         "original_effect": original_ate,
         "ratio": placebo_ratio,
         "passed": placebo_passed,
-        "description": "Replace treatment with random permutation — ATE should collapse to ~0",
+        "description": "Replace treatment with random permutation — Incremental Sales should collapse to ~0",
     }
     if not placebo_passed:
         all_passed = False
@@ -189,7 +189,7 @@ def _run_refutations(
         "pct_change": rc_change,
         "sign_flip": rc_sign_flip,
         "passed": rc_passed,
-        "description": "Add random confounder — ATE should remain stable",
+        "description": "Add random confounder — Incremental Sales should remain stable",
     }
     if not rc_passed:
         all_passed = False
@@ -218,7 +218,7 @@ def _run_refutations(
         "pct_change": sub_change,
         "sign_flip": sub_sign_flip,
         "passed": sub_passed,
-        "description": "Estimate on 80% random subset — ATE should be similar",
+        "description": "Estimate on 80% random subset — Incremental Sales should be similar",
     }
     if not sub_passed:
         all_passed = False
@@ -265,7 +265,7 @@ def run_decay_sweep(
             "p_value": p_value,
             "r_squared": r_squared,
         })
-        logger.info("θ=%.1f  ATE=%.4f  p=%.4f  R²=%.4f", decay, ate, p_value, r_squared)
+        logger.info("θ=%.1f  Incremental Sales=%.4f  p=%.4f  R²=%.4f", decay, ate, p_value, r_squared)
 
     return pd.DataFrame(rows)
 
@@ -311,9 +311,9 @@ def build_interpretation(
 
     Args:
         ate: Average Treatment Effect (outcome units per ₹1 spend).
-        p_value: P-value for the ATE.
+        p_value: P-value for the Incremental Sales.
         best_decay: Best-fit adstock decay θ.
-        ate_pct_impact: ATE as % of mean baseline outcome.
+        ate_pct_impact: Incremental Sales as % of mean baseline outcome.
         refutation_passed: Whether all refutation tests passed.
         mean_outcome: Mean daily outcome value (for context).
         outcome_col: Outcome column being analysed (e.g. "enquiries").
@@ -421,9 +421,9 @@ def run_print_causal_analysis(
 
     if panel["total_spend_inr"].sum() == 0:
         warnings_list.append(
-            "Total print spend is zero across the selected period. ATE will be 0."
+            "Total print spend is zero across the selected period. Incremental Sales will be 0."
         )
-        logger.warning("All spend is zero — ATE will be trivially 0")
+        logger.warning("All spend is zero — Incremental Sales will be trivially 0")
 
     logger.info("Running decay sweep across %d θ values...", len(DECAY_VALUES))
     decay_sweep = run_decay_sweep(panel, outcome_col, CONFOUNDER_COLS, DECAY_VALUES)
@@ -478,7 +478,7 @@ def run_print_causal_analysis(
 
     if p_value >= 0.10:
         warnings_list.append(
-            f"ATE is not statistically significant (p={p_value:.4f}). "
+            f"Incremental Sales is not statistically significant (p={p_value:.4f}). "
             "Interpret the causal estimate with caution."
         )
 

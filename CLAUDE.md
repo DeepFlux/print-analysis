@@ -182,9 +182,9 @@ No unobserved confounders assumed — **this assumption must be displayed in the
 ### Refutation Tests — Mandatory, Run All Three
 | Test | Pass Condition |
 |---|---|
-| Placebo treatment | ATE collapses to ~0 |
-| Random common cause | ATE changes <20% and does not flip sign |
-| Data subset refuter (80%) | ATE changes <20% and does not flip sign |
+| Placebo treatment | Incremental Sales collapses to ~0 |
+| Random common cause | Incremental Sales changes <20% and does not flip sign |
+| Data subset refuter (80%) | Incremental Sales changes <20% and does not flip sign |
 
 Set `refutation_passed = False` if any test fails. Show this prominently in the UI.
 
@@ -209,11 +209,11 @@ class CausalResult:
 # Print module extension — src/analysis/causal/print_sales/models.py
 @dataclass
 class PrintCausalResult(CausalResult):
-    ate_pct_impact: float            # ATE as % of mean baseline sales
+    ate_pct_impact: float            # Incremental Sales as % of mean baseline sales
     best_decay_theta: float          # Winning adstock decay rate (θ)
     refutation_details: dict         # Per-test breakdown
-    decay_sweep: pd.DataFrame        # theta, ATE, p_value, r_squared per decay
-    region_breakdown: pd.DataFrame   # region, ATE, CI, p_value, n_days
+    decay_sweep: pd.DataFrame        # theta, Incremental Sales, p_value, r_squared per decay
+    region_breakdown: pd.DataFrame   # region, Incremental Sales, CI, p_value, n_days
     edition_breakdown: pd.DataFrame
     size_breakdown: pd.DataFrame
     position_breakdown: pd.DataFrame
@@ -290,7 +290,7 @@ if st.button("Run Analysis"):
 | `test_adstock_zero_decay` | adstock equals raw spend |
 | `test_adstock_full_decay` | cumulative sum of spend |
 | `test_adstock_max_lag` | no carry-over beyond day 7 |
-| `test_ate_zero_spend` | ATE = 0, warning raised |
+| `test_ate_zero_spend` | Incremental Sales = 0, warning raised |
 | `test_region_mismatch` | `DataValidationError` raised |
 | `test_decay_sweep_all_thetas` | 10 rows in decay_sweep DataFrame |
 | `test_refutation_placebo` | `refutation_passed = True` on synthetic zero-effect data |

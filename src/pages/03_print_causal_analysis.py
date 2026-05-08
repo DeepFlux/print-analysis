@@ -101,7 +101,7 @@ def _refutation_badge(passed: bool) -> str:
 
 
 def _prepare_breakdown_display(df: pd.DataFrame) -> pd.DataFrame:
-    """Scale ATE columns to per ₹10,00,000 and round p_value to 3 dp."""
+    """Scale Incremental Sales columns to per ₹10,00,000 and round p_value to 3 dp."""
     out = df.copy()
     for col in ["ate", "ate_lower", "ate_upper"]:
         if col in out.columns:
@@ -110,7 +110,7 @@ def _prepare_breakdown_display(df: pd.DataFrame) -> pd.DataFrame:
         out["p_value"] = out["p_value"].round(3)
     rename = {
         "group": "Group",
-        "ate": "ATE (units / ₹10L)",
+        "ate": "Incremental Sales (units / ₹10L)",
         "ate_lower": "CI Lower",
         "ate_upper": "CI Upper",
         "p_value": "p-value",
@@ -293,7 +293,7 @@ with col1:
     st.markdown(
         f"""
         <div class="metric-card">
-            <div class="metric-label">ATE ({_outcome_unit} per ₹10,00,000 spend)</div>
+            <div class="metric-label">Incremental Sales ({_outcome_unit} per ₹10,00,000 spend)</div>
             <div class="metric-value">{ate_per_m:+.3f}</div>
         </div>
         """,
@@ -354,7 +354,7 @@ with scol2:
     st.markdown(
         f"""
         <div class="metric-card">
-            <div class="metric-label">Total Incremental {_outcome_unit.title()} (ATE × Total Spend)</div>
+            <div class="metric-label">Total Incremental {_outcome_unit.title()} (Incremental Sales × Total Spend)</div>
             <div class="metric-value">{total_impact_units:+,.0f}</div>
         </div>
         """,
@@ -363,7 +363,7 @@ with scol2:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Row 3 — Decay sweep | ATE by region
+# Row 3 — Decay sweep | Incremental Sales by region
 col_left, col_right = st.columns(2)
 
 with col_left:
@@ -404,14 +404,14 @@ else:
     st.caption(
         f"Cuts where the estimated incremental {_outcome_unit} per ₹ of Print spend is "
         f"credibly positive (p < {p_thr:.2f}). Use this to prioritise the next "
-        f"buying cycle. ATE values shown per ₹10,00,000 of spend."
+        f"buying cycle. Incremental Sales values shown per ₹10,00,000 of spend."
     )
 
     rec_cols = ["dimension", "group", "ate_per_10L", "p_value", "n_obs", "total_spend_inr"]
     rec_rename = {
         "dimension": "Dimension",
         "group": "Group",
-        "ate_per_10L": f"ATE ({_outcome_unit} / ₹10L)",
+        "ate_per_10L": f"Incremental Sales ({_outcome_unit} / ₹10L)",
         "p_value": "p-value",
         "n_obs": "Observations",
         "total_spend_inr": "Spend in window (₹)",
@@ -486,8 +486,8 @@ with st.expander("Modelling Assumptions & Warnings", expanded=False):
             st.markdown(
                 f"**{test_name.replace('_', ' ').title()}** — {status}  \n"
                 f"{details.get('description', '')}  \n"
-                f"Original ATE: `{details.get('original_effect', 0):.4f}` → "
-                f"New ATE: `{details.get('new_effect', 0):.4f}`"
+                f"Original Incremental Sales: `{details.get('original_effect', 0):.4f}` → "
+                f"New Incremental Sales: `{details.get('new_effect', 0):.4f}`"
             )
 
 # Row 6 — Download

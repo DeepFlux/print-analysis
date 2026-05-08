@@ -15,7 +15,7 @@ class PrintCausalResult(CausalResult):
     and print-specific metadata.
 
     Args:
-        ate_pct_impact: ATE expressed as a percentage of mean baseline sales.
+        ate_pct_impact: Incremental Sales expressed as a percentage of mean baseline sales.
         best_decay_theta: Winning adstock decay rate θ selected from sweep.
         refutation_details: Per-test breakdown of refutation results.
         decay_sweep: DataFrame with columns: theta, ate, ate_lower, ate_upper,

@@ -160,7 +160,7 @@ def _run_dimension_breakdown(
             "n_obs": len(panel),
             "total_spend_inr": spend_total,
         })
-        logger.info("%s=%s  ATE=%.4f  p=%.4f  n=%d", dimension, value, ate, p_value, len(panel))
+        logger.info("%s=%s  Incremental Sales=%.4f  p=%.4f  n=%d", dimension, value, ate, p_value, len(panel))
 
     if not rows:
         return pd.DataFrame(columns=_BREAKDOWN_COLS)
@@ -174,7 +174,7 @@ def run_region_breakdown(
     confounder_cols: list[str],
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per region by filtering the primary panel.
+    """Estimate Incremental Sales per region by filtering the primary panel.
 
     Args:
         panel: Full analytical panel with all adstock columns.
@@ -206,7 +206,7 @@ def run_region_breakdown(
             "n_obs": len(sub),
             "total_spend_inr": float(sub["total_spend_inr"].sum()),
         })
-        logger.info("Region=%s  ATE=%.4f  p=%.4f  n=%d", region, ate, p_value, len(sub))
+        logger.info("Region=%s  Incremental Sales=%.4f  p=%.4f  n=%d", region, ate, p_value, len(sub))
 
     if not rows:
         return pd.DataFrame(columns=_BREAKDOWN_COLS)
@@ -222,7 +222,7 @@ def run_edition_breakdown(
     max_lag: int = 7,
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per edition."""
+    """Estimate Incremental Sales per edition."""
     logger.info("Running edition breakdown...")
     return _run_dimension_breakdown(
         print_spend, sales, "edition", best_decay, confounder_cols, max_lag, outcome_col
@@ -237,7 +237,7 @@ def run_size_breakdown(
     max_lag: int = 7,
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per ad size (full_page, half_page, etc.)."""
+    """Estimate Incremental Sales per ad size (full_page, half_page, etc.)."""
     logger.info("Running size breakdown...")
     return _run_dimension_breakdown(
         print_spend, sales, "size", best_decay, confounder_cols, max_lag, outcome_col
@@ -252,7 +252,7 @@ def run_position_breakdown(
     max_lag: int = 7,
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per placement position (front_page, back_page, etc.)."""
+    """Estimate Incremental Sales per placement position (front_page, back_page, etc.)."""
     logger.info("Running position breakdown...")
     return _run_dimension_breakdown(
         print_spend, sales, "position", best_decay, confounder_cols, max_lag, outcome_col
@@ -267,7 +267,7 @@ def run_publication_breakdown(
     max_lag: int = 7,
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per publication."""
+    """Estimate Incremental Sales per publication."""
     logger.info("Running publication breakdown...")
     return _run_dimension_breakdown(
         print_spend, sales, "publication", best_decay, confounder_cols, max_lag, outcome_col
@@ -280,7 +280,7 @@ def run_product_breakdown(
     confounder_cols: list[str],
     outcome_col: str = _DEFAULT_OUTCOME_COL,
 ) -> pd.DataFrame:
-    """Estimate ATE per product by filtering the primary panel.
+    """Estimate Incremental Sales per product by filtering the primary panel.
 
     Unlike edition/size/position, product is in the primary panel directly
     (it is part of the join key), so no panel rebuild is needed.
@@ -317,7 +317,7 @@ def run_product_breakdown(
             "n_obs": len(sub),
             "total_spend_inr": float(sub["total_spend_inr"].sum()),
         })
-        logger.info("Product=%s  ATE=%.4f  p=%.4f  n=%d", product, ate, p_value, len(sub))
+        logger.info("Product=%s  Incremental Sales=%.4f  p=%.4f  n=%d", product, ate, p_value, len(sub))
 
     if not rows:
         return pd.DataFrame(columns=_BREAKDOWN_COLS)

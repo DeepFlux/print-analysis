@@ -1,7 +1,7 @@
 # Plan: Print Spend → Sales Causal Analysis
 
 ## Context
-Havas Martech Analytics Platform needs a causal analysis module estimating the Average Treatment Effect (ATE) of Print media spend on daily regional sales. The module uses geometric adstock decay (θ sweep 0.0–0.9), DoWhy with Linear Regression, mandatory refutation tests, and dimension-level sub-group breakdowns (Region, Edition, Size, Position). Output is a Streamlit page styled in Havas Black & Red theme.
+Havas Martech Analytics Platform needs a causal analysis module estimating the Average Treatment Effect (Incremental Sales) of Print media spend on daily regional sales. The module uses geometric adstock decay (θ sweep 0.0–0.9), DoWhy with Linear Regression, mandatory refutation tests, and dimension-level sub-group breakdowns (Region, Edition, Size, Position). Output is a Streamlit page styled in Havas Black & Red theme.
 
 ---
 
@@ -83,11 +83,11 @@ from src.analysis.causal.models import CausalResult
 
 @dataclass
 class PrintCausalResult(CausalResult):
-    ate_pct_impact: float             # ATE as % of mean baseline sales
+    ate_pct_impact: float             # Incremental Sales as % of mean baseline sales
     best_decay_theta: float           # Winning θ
     refutation_details: dict          # per-test breakdown
-    decay_sweep: pd.DataFrame         # theta, ATE, p_value, r_squared
-    region_breakdown: pd.DataFrame    # region, ATE, ate_lower, ate_upper, p_value, n_obs
+    decay_sweep: pd.DataFrame         # theta, Incremental Sales, p_value, r_squared
+    region_breakdown: pd.DataFrame    # region, Incremental Sales, ate_lower, ate_upper, p_value, n_obs
     edition_breakdown: pd.DataFrame
     size_breakdown: pd.DataFrame
     position_breakdown: pd.DataFrame
@@ -168,7 +168,7 @@ def _run_refutations(
     original_ate: float,
 ) -> tuple[bool, dict]:
     """Run placebo, random_common_cause, data_subset refuters.
-    Pass condition: placebo ATE p>0.05; others change <20% and no sign flip."""
+    Pass condition: placebo Incremental Sales p>0.05; others change <20% and no sign flip."""
 
 def run_decay_sweep(
     panel: pd.DataFrame,
@@ -247,10 +247,10 @@ def run_position_breakdown(
 import plotly.graph_objects as go
 
 def plot_decay_sweep(decay_sweep: pd.DataFrame) -> go.Figure:
-    """Line chart: x=θ, y=ATE with CI bands. Havas Red primary series."""
+    """Line chart: x=θ, y=Incremental Sales with CI bands. Havas Red primary series."""
 
 def plot_ate_by_region(region_breakdown: pd.DataFrame) -> go.Figure:
-    """Horizontal bar chart sorted by ATE. Havas Red bars."""
+    """Horizontal bar chart sorted by Incremental Sales. Havas Red bars."""
 
 def plot_subgroup_breakdown(breakdown_df: pd.DataFrame, dimension_label: str) -> go.Figure:
     """Horizontal bar of ATEs for a given dimension. Error bars for CIs."""
@@ -272,8 +272,8 @@ Layout per Spec Section 8:
 - `st.set_page_config(layout="wide")` (mandatory)
 - Havas theme CSS injected via `st.markdown(..., unsafe_allow_html=True)`
 - Sidebar: region multi-select, date range, max adstock lag slider (1–7)
-- Row 1: 4 metric cards — ATE, Best θ, p-value badge, Refutation badge
-- Row 2: Decay sweep chart | ATE by region bar chart
+- Row 1: 4 metric cards — Incremental Sales, Best θ, p-value badge, Refutation badge
+- Row 2: Decay sweep chart | Incremental Sales by region bar chart
 - Row 3: Sub-group tabs (Region / Edition / Size / Position), each with table + chart
 - Row 4: Expandable assumptions & warnings + interpretation paragraph
 - Row 5: Download button (Excel export via openpyxl)
@@ -288,7 +288,7 @@ Layout per Spec Section 8:
 | `test_adstock_zero_decay` | apply_adstock(decay=0.0) → equals raw spend |
 | `test_adstock_full_decay` | apply_adstock(decay=1.0) → cumulative sum |
 | `test_adstock_max_lag` | 10-day series, max_lag=7 → no carry-over after day 7 |
-| `test_ate_zero_spend` | All spend=0 → ATE=0, warning in result |
+| `test_ate_zero_spend` | All spend=0 → Incremental Sales=0, warning in result |
 | `test_panel_build_region_mismatch` | Regions don't match → DataValidationError |
 | `test_decay_sweep_returns_all_thetas` | Normal input → 10 rows in decay_sweep |
 | `test_refutation_placebo` | Synthetic zero-effect data → refutation_passed=True |
@@ -309,7 +309,7 @@ All tests use synthetic fixtures; no real client data.
 4. **`lagged_sales_1d`**: Computed during `build_analytical_panel` as `sales_units.shift(1)` per region. Rows with NaN lag (first day per region) are dropped and logged.
 
 5. **`refutation_passed` logic**:
-   - Placebo: passes if placebo ATE is not significant (p > 0.05 on placebo estimate)
+   - Placebo: passes if placebo Incremental Sales is not significant (p > 0.05 on placebo estimate)
    - Random common cause: passes if |new_ATE - original_ATE| / |original_ATE| < 0.20 and no sign flip
    - Data subset: same threshold as random common cause
 

@@ -9,7 +9,7 @@ HAVAS_GREY = "#555555"
 HAVAS_LIGHT = "#F5F5F5"
 
 _ATE_SCALE = 1_000_000
-_ATE_AXIS_LABEL = "ATE (sales units per ₹10,00,000 spend)"
+_ATE_AXIS_LABEL = "Incremental Sales (sales units per ₹10,00,000 spend)"
 
 
 def _scale_ate(df: pd.DataFrame) -> pd.DataFrame:
@@ -22,13 +22,13 @@ def _scale_ate(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def plot_decay_sweep(decay_sweep: pd.DataFrame) -> go.Figure:
-    """Line chart of ATE vs adstock decay θ with 95% CI bands.
+    """Line chart of Incremental Sales vs adstock decay θ with 95% CI bands.
 
     Args:
         decay_sweep: DataFrame with columns: theta, ate, ate_lower, ate_upper.
 
     Returns:
-        Plotly Figure with ATE scaled to per ₹10,00,000 spend.
+        Plotly Figure with Incremental Sales scaled to per ₹10,00,000 spend.
     """
     df = _scale_ate(decay_sweep)
     fig = go.Figure()
@@ -60,15 +60,15 @@ def plot_decay_sweep(decay_sweep: pd.DataFrame) -> go.Figure:
             x=df["theta"],
             y=df["ate"],
             mode="lines+markers",
-            name="ATE",
+            name="Incremental Sales",
             line={"color": HAVAS_RED, "width": 2},
             marker={"color": HAVAS_RED, "size": 8},
-            hovertemplate="θ=%{x:.1f}<br>ATE=%{y:.3f}<extra></extra>",
+            hovertemplate="θ=%{x:.1f}<br>Incremental Sales=%{y:.3f}<extra></extra>",
         )
     )
 
     fig.update_layout(
-        title={"text": "Adstock Decay Sweep — ATE by θ", "font": {"color": HAVAS_DARK}},
+        title={"text": "Adstock Decay Sweep — Incremental Sales by θ", "font": {"color": HAVAS_DARK}},
         xaxis={
             "title": "Adstock Decay (θ)",
             "tickvals": df["theta"].tolist(),
@@ -85,13 +85,13 @@ def plot_decay_sweep(decay_sweep: pd.DataFrame) -> go.Figure:
 
 
 def plot_ate_by_region(region_breakdown: pd.DataFrame) -> go.Figure:
-    """Horizontal bar chart of ATE by region, sorted descending.
+    """Horizontal bar chart of Incremental Sales by region, sorted descending.
 
     Args:
         region_breakdown: DataFrame with columns: group, ate, ate_lower, ate_upper.
 
     Returns:
-        Plotly Figure with ATE scaled to per ₹10,00,000 spend.
+        Plotly Figure with Incremental Sales scaled to per ₹10,00,000 spend.
     """
     df = _scale_ate(region_breakdown).sort_values("ate", ascending=True)
     error_minus = (df["ate"] - df["ate_lower"]).tolist()
@@ -111,11 +111,11 @@ def plot_ate_by_region(region_breakdown: pd.DataFrame) -> go.Figure:
                 "color": HAVAS_GREY,
                 "thickness": 1.5,
             },
-            hovertemplate="<b>%{y}</b><br>ATE=%{x:.3f}<extra></extra>",
+            hovertemplate="<b>%{y}</b><br>Incremental Sales=%{x:.3f}<extra></extra>",
         )
     )
     fig.update_layout(
-        title={"text": "ATE by Region", "font": {"color": HAVAS_DARK}},
+        title={"text": "Incremental Sales by Region", "font": {"color": HAVAS_DARK}},
         xaxis={"title": _ATE_AXIS_LABEL, "gridcolor": "#E8E8E8"},
         yaxis={"title": "Region"},
         plot_bgcolor="#FFFFFF",
@@ -130,7 +130,7 @@ def plot_recommendation_column_chart(
     rec_df: pd.DataFrame,
     dimension_label: str,
 ) -> go.Figure:
-    """Vertical column chart of ATE per cut for one dimension's recommendations.
+    """Vertical column chart of Incremental Sales per cut for one dimension's recommendations.
 
     Args:
         rec_df: Per-dimension recommendations DataFrame with columns:
@@ -139,7 +139,7 @@ def plot_recommendation_column_chart(
         dimension_label: Human-readable dimension name (e.g. "Publication").
 
     Returns:
-        Plotly Figure with vertical bars sorted by ATE descending.
+        Plotly Figure with vertical bars sorted by Incremental Sales descending.
     """
     df = rec_df.copy().sort_values("ate_per_10L", ascending=False)
 
@@ -151,7 +151,7 @@ def plot_recommendation_column_chart(
             customdata=df[["p_value", "n_obs", "total_spend_inr"]].to_numpy(),
             hovertemplate=(
                 "<b>%{x}</b><br>"
-                "ATE per ₹10L: %{y:,.3f}<br>"
+                "Incremental Sales per ₹10L: %{y:,.3f}<br>"
                 "p-value: %{customdata[0]:.3f}<br>"
                 "Observations: %{customdata[1]:,}<br>"
                 "Spend in window: ₹%{customdata[2]:,.0f}"
@@ -160,7 +160,7 @@ def plot_recommendation_column_chart(
         )
     )
     fig.update_layout(
-        title={"text": f"ATE by {dimension_label}", "font": {"color": HAVAS_DARK}},
+        title={"text": f"Incremental Sales by {dimension_label}", "font": {"color": HAVAS_DARK}},
         xaxis={
             "title": dimension_label,
             "tickangle": -35,
@@ -184,7 +184,7 @@ def plot_subgroup_breakdown(breakdown_df: pd.DataFrame, dimension_label: str) ->
         dimension_label: Human-readable dimension name (e.g. "Edition").
 
     Returns:
-        Plotly Figure with ATE scaled to per ₹10,00,000 spend.
+        Plotly Figure with Incremental Sales scaled to per ₹10,00,000 spend.
     """
     df = _scale_ate(breakdown_df).sort_values("ate", ascending=True)
     error_minus = (df["ate"] - df["ate_lower"]).tolist()
@@ -204,11 +204,11 @@ def plot_subgroup_breakdown(breakdown_df: pd.DataFrame, dimension_label: str) ->
                 "color": HAVAS_GREY,
                 "thickness": 1.5,
             },
-            hovertemplate="<b>%{y}</b><br>ATE=%{x:.3f}<extra></extra>",
+            hovertemplate="<b>%{y}</b><br>Incremental Sales=%{x:.3f}<extra></extra>",
         )
     )
     fig.update_layout(
-        title={"text": f"ATE by {dimension_label}", "font": {"color": HAVAS_DARK}},
+        title={"text": f"Incremental Sales by {dimension_label}", "font": {"color": HAVAS_DARK}},
         xaxis={"title": _ATE_AXIS_LABEL, "gridcolor": "#E8E8E8"},
         yaxis={"title": dimension_label},
         plot_bgcolor="#FFFFFF",

@@ -1,12 +1,12 @@
 """Recommendation engine for next print buys.
 
-Consumes per-dimension ATE breakdowns (publication, size, position, edition,
+Consumes per-dimension Incremental Sales breakdowns (publication, size, position, edition,
 region, product) and surfaces:
-  - prioritised list of cuts to scale up (positive ATE, statistically credible)
-  - cuts to deprioritise (negative ATE that is statistically credible)
+  - prioritised list of cuts to scale up (positive Incremental Sales, statistically credible)
+  - cuts to deprioritise (negative Incremental Sales that is statistically credible)
 
-The signal used is the ATE itself (incremental outcome per ₹ of spend);
-candidates are ranked by ATE descending. Significance is treated as a soft
+The signal used is the Incremental Sales itself (incremental outcome per ₹ of spend);
+candidates are ranked by Incremental Sales descending. Significance is treated as a soft
 gate via the ``p_threshold`` parameter — rows with p ≥ threshold are dropped
 from the "scale up" list because the effect could be noise.
 """
@@ -29,7 +29,7 @@ def _rank_dimension(
     top_n: int,
     p_threshold: float,
 ) -> pd.DataFrame:
-    """Return the top-N positive-ATE rows for a single dimension.
+    """Return the top-N positive-Incremental Sales rows for a single dimension.
 
     Args:
         breakdown: Output of one of the run_*_breakdown functions.
@@ -67,7 +67,7 @@ def _rank_avoid(
     top_n: int,
     p_threshold: float,
 ) -> pd.DataFrame:
-    """Return rows where ATE is credibly negative — candidates to deprioritise."""
+    """Return rows where Incremental Sales is credibly negative — candidates to deprioritise."""
     if breakdown is None or breakdown.empty:
         return pd.DataFrame()
 
@@ -113,7 +113,7 @@ def build_recommendations(
     Returns:
         Dict with keys:
             - per_dimension: dict[str, pd.DataFrame] — top rows per dimension
-            - combined_scale_up: pd.DataFrame — all top rows union, ranked by ATE
+            - combined_scale_up: pd.DataFrame — all top rows union, ranked by Incremental Sales
             - combined_avoid: pd.DataFrame — all credibly negative rows
             - p_threshold: float — gate that was applied
             - top_n: int — cap that was applied
